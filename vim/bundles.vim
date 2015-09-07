@@ -38,9 +38,12 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'nono/jquery.vim'
 Bundle 'tpope/vim-markdown'
+Bundle 'slim-template/vim-slim'
 " Ruby支持
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+" 代码补全
+Bundle 'vim-scripts/AutoComplPop'
 
 filetype plugin indent on     " required!
 

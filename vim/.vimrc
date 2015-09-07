@@ -25,17 +25,18 @@ set statusline=%F:\ %l         " 在状态栏显示当前文件路径及所在�
 set matchpairs+=<:>            " specially for html
 set autoindent
 set smartindent                " indent when
-set tabstop=4                  " tab width
-set softtabstop=4              " backspace
-set shiftwidth=4               " indent width
+set tabstop=2                  " tab width
+set softtabstop=2              " backspace
+set shiftwidth=2               " indent width
 set expandtab                  " expand tab to space
 let mapleader=','
 set hidden                     " 解决文档未保存时不能使用TAB切换的问题
+"set splitright                 " 所有文件都从右侧纵向分割打开
 " 使用TAB切换buffers
 map <s-tab> :bp<cr> 
 map <tab> :bn<cr>
 " 在注释行换行时，不自动添加注释字符
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
@@ -72,3 +73,5 @@ let NERDTreeWinPos = "right"
 " 查找项目目录中的TODO列表
 noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
+" ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp)|(\.(swp|ico|git|svn))$'
