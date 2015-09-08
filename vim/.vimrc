@@ -75,3 +75,6 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp)|(\.(swp|ico|git|svn))$'
+
+" emmet
+"let g:user_emmet_expandabbr_key = '<C-e>'
