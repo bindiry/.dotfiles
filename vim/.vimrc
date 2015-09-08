@@ -31,6 +31,7 @@ set shiftwidth=2               " indent width
 set expandtab                  " expand tab to space
 let mapleader=','
 set hidden                     " 解决文档未保存时不能使用TAB切换的问题
+set hlsearch                   " 高亮搜索结果
 "set splitright                 " 所有文件都从右侧纵向分割打开
 " 使用TAB切换buffers
 map <s-tab> :bp<cr> 
