@@ -13,6 +13,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'Raimondi/delimitMate'
 " HTML代码自动生成
 Bundle 'mattn/emmet-vim'
+" 高亮html标签
+Bundle 'Valloric/MatchTagAlways'
 " 支持多语言的注释
 Bundle 'scrooloose/nerdcommenter'
 " 树形目录

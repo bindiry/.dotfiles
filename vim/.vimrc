@@ -79,3 +79,13 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp)|(\.(swp|ico|gi
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
+
+" MatchTagAlways
+let g:mta_use_matchparen_group = 1
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'erb' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jinja' : 1,
+    \}
