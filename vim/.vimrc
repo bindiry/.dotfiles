@@ -75,7 +75,7 @@ let NERDTreeWinPos = "right"
 noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " ctrlp
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site)|(\.(swp|ico|git|svn))$'
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
@@ -89,3 +89,6 @@ let g:mta_filetypes = {
     \ 'xml' : 1,
     \ 'jinja' : 1,
     \}
+
+" ctags
+au BufWritePost *.rb,*.ru silent! !ctags -R &

@@ -29,6 +29,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'godlygeek/tabular'
 " 状态栏显示
 Bundle 'vim-airline'
+" 代码补全
+Bundle 'vim-scripts/AutoComplPop'
 " Color Schemes
 Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'fisadev/fisa-vim-colorscheme'
@@ -44,8 +46,6 @@ Bundle 'slim-template/vim-slim'
 " Ruby支持
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
-" 代码补全
-Bundle 'vim-scripts/AutoComplPop'
 
 filetype plugin indent on     " required!
 
