@@ -76,6 +76,8 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site)|(\.(swp|ico|git|svn))$'
+nnoremap <leader>ls :CtrlPBuffer<cr>
+nnoremap <leader>. :CtrlPTag<cr>
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
@@ -91,4 +93,27 @@ let g:mta_filetypes = {
     \}
 
 " ctags
-au BufWritePost *.rb,*.ru silent! !ctags -R &
+"au BufWritePost *.rb,*.ru silent! !ctags -R &
+function! DelTagOfFile(file)
+  let fullpath = a:file
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let f = substitute(fullpath, cwd . "/", "", "")
+  let f = escape(f, './')
+  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+  let resp = system(cmd)
+endfunction
+
+function! UpdateTags()
+  let f = expand("%:p")
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let cmd = 'ctags -R ' . tagfilename . ' --languages=ruby --exclude=.git --exclude=.js --exclude=.css --exclude=tmp ' . '"' . f . '"'
+  call DelTagOfFile(f)
+  let resp = system(cmd)
+endfunction
+autocmd BufWritePost *.rb,*.ru call UpdateTags()
+
+" vim-i18n
+vmap <Leader>z :call I18nTranslateString()<CR>
+vmap <Leader>dt :call I18nDisplayTranslation()<CR>

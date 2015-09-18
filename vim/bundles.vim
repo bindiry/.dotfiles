@@ -11,6 +11,8 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-surround'
 " 符号自动补全
 Bundle 'Raimondi/delimitMate'
+" 代码搜索
+Bundle 'mileszs/ack.vim'
 " HTML代码自动生成
 Bundle 'mattn/emmet-vim'
 " 高亮html标签
@@ -46,6 +48,7 @@ Bundle 'slim-template/vim-slim'
 " Ruby支持
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+Bundle 'stefanoverna/vim-i18n'
 
 filetype plugin indent on     " required!
 
