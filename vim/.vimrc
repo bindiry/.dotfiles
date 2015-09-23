@@ -60,7 +60,6 @@ endif
 " autocmd VimEnter * NERDTree
 " 打开vim时自动将光标定位在编辑窗口
 " autocmd VimEnter * wincmd p
-map <F3> :NERDTreeToggle<CR>
 " let NERDChristmasTree=0
 let NERDTreeWinSize=30
 let NERDTreeChDirMode=2
@@ -68,6 +67,8 @@ let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
 let NERDTreeShowBookmarks=1
 let NERDTreeWinPos = "right"
+nmap ,n :NERDTreeFind<CR>
+nmap ,m :NERDTreeToggle<CR>
 " 如果打开的文件只剩nerdtree，则直接退出，避免多次:q
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 
