@@ -32,7 +32,8 @@ set expandtab                  " expand tab to space
 let mapleader=','
 set hidden                     " 解决文档未保存时不能使用TAB切换的问题
 set hlsearch                   " 高亮搜索结果
-"set splitright                 " 所有文件都从右侧纵向分割打开
+set iskeyword+=-               " 匹配使用-连接的关键词
+"set splitright                " 所有文件都从右侧纵向分割打开
 " 使用TAB切换buffers
 map <s-tab> :bp<cr> 
 map <tab> :bn<cr>
@@ -76,7 +77,13 @@ nmap ,m :NERDTreeToggle<CR>
 noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " ctrlp
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site)|(\.(swp|ico|git|svn))$'
+"unlet g:ctrlp_custom_ignore
+"unlet g:ctrlp_user_command
+"let g:ctrlp_custom_ignore = {
+  "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|test$\|\_site$\|target$\|tmp$',
+  "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$' }
+set wildignore+=*/tmp/*,*/.git/*,*/.hg/*,*/.svn/*,*/bower_components/*,"/node_modules/*,*/_site/*,*/target/*,
+  \ *.so,*.swp,*.zip,*.ico,*.jpg,*.png
 nnoremap <leader>ls :CtrlPBuffer<cr>
 nnoremap <leader>. :CtrlPTag<cr>
 
