@@ -3,7 +3,6 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 syntax on
 colorscheme onedark 
-set cursorline
 set clipboard+=unnamed         " use system clipboard
 set incsearch
 set smartcase
@@ -34,6 +33,12 @@ set hidden                     " 解决文档未保存时不能使用TAB切换�
 set hlsearch                   " 高亮搜索结果
 set iskeyword+=-               " 匹配使用-连接的关键词
 "set splitright                " 所有文件都从右侧纵向分割打开
+set cursorline
+set cursorcolumn
+" 设置高亮列背景色，并设置快捷键开启和关闭
+hi CursorColumn ctermbg=black
+nnoremap <Leader>col :set cursorcolumn!<CR>
+
 " 使用TAB切换buffers
 map <s-tab> :bp<cr> 
 map <tab> :bn<cr>
@@ -77,15 +82,14 @@ nmap ,m :NERDTreeToggle<CR>
 noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " ctrlp
+"set wildignore+=*/tmp/*,*/.git/*,*/.hg/*,*/.svn/*,*/bower_components/*,"/node_modules/*,*/_site/*,*/target/*,
+  "\ *.so,*.swp,*.zip,*.ico,*.jpg,*.png
 "unlet g:ctrlp_custom_ignore
-"unlet g:ctrlp_user_command
 "let g:ctrlp_custom_ignore = {
   "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|test$\|\_site$\|target$\|tmp$',
-  "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$' }
-set wildignore+=*/tmp/*,*/.git/*,*/.hg/*,*/.svn/*,*/bower_components/*,"/node_modules/*,*/_site/*,*/target/*,
-  \ *.so,*.swp,*.zip,*.ico,*.jpg,*.png
-nnoremap <leader>ls :CtrlPBuffer<cr>
-nnoremap <leader>. :CtrlPTag<cr>
+  "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$',
+  "\ }
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site)|(\.(swp|ico|git|svn))$'
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
