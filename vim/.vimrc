@@ -89,7 +89,7 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
   "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|test$\|\_site$\|target$\|tmp$',
   "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$',
   "\ }
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(swp|ico|git|svn))$'
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
@@ -129,3 +129,8 @@ autocmd BufWritePost *.rb,*.ru call UpdateTags()
 " vim-i18n
 vmap <Leader>z :call I18nTranslateString()<CR>
 vmap <Leader>dt :call I18nDisplayTranslation()<CR>
+
+" Dash
+nmap <leader>di :silent !open dash://iphoneos:<cword><cr> 
+nmap <leader>dr :silent !open dash://ruby:<cword><cr>
+nmap <leader>da :silent !open dash://rails:<cword><cr>
