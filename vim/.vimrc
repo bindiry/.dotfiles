@@ -31,7 +31,7 @@ set expandtab                  " expand tab to space
 let mapleader=','
 set hidden                     " 解决文档未保存时不能使用TAB切换的问题
 set hlsearch                   " 高亮搜索结果
-set iskeyword+=-               " 匹配使用-连接的关键词
+"set iskeyword+=-               " 匹配使用-连接的关键词
 "set splitright                " 所有文件都从右侧纵向分割打开
 set cursorline
 set cursorcolumn
@@ -89,7 +89,7 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
   "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|test$\|\_site$\|target$\|tmp$',
   "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$',
   "\ }
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(swp|ico|git|svn))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public|tags)|(\.(swp|ico|git|svn|png|jpg|zip))$'
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
@@ -131,6 +131,5 @@ vmap <Leader>z :call I18nTranslateString()<CR>
 vmap <Leader>dt :call I18nDisplayTranslation()<CR>
 
 " Dash
-nmap <leader>di :silent !open dash://iphoneos:<cword><cr> 
 nmap <leader>dr :silent !open dash://ruby:<cword><cr>
 nmap <leader>da :silent !open dash://rails:<cword><cr>
