@@ -3,6 +3,8 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 syntax on
 colorscheme onedark 
+set guifont=M+\ 2m:h16         " 设置字体和大小
+set lines=40 columns=200       " 设置默认窗口大小
 set clipboard+=unnamed         " use system clipboard
 set incsearch
 set smartcase
