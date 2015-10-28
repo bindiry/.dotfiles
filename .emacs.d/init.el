@@ -7,3 +7,5 @@
 (require 'init-elpa)
 ;; 初始化一般配置
 (require 'init-general)
+
+(provide 'init)

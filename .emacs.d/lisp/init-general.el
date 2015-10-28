@@ -18,8 +18,8 @@
 ;;不生成备份文件，即 xxx.xx~ 类文件
 (setq make-backup-files nil)
 ;; 默认窗口大小
-(add-to-list 'default-frame-alist '(width . 180))
-(add-to-list 'default-frame-alist '(height . 40))
+(add-to-list 'default-frame-alist '(width . 140))
+(add-to-list 'default-frame-alist '(height . 30))
 ;; 使用主题
 (load-theme 'atom-one-dark t)
 ;; 默认字体
