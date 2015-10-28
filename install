@@ -1,7 +1,5 @@
 #!/bin/bash
 
 git clone https://github.com/gmarik/vundle.git ~/.dotfiles/vim/bundle/vundle
-vim +BundleInstall +qall
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/tmux/.tmux.conf ~/.tmux.conf
 

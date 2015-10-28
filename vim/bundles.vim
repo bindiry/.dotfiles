@@ -47,8 +47,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'slim-template/vim-slim'
 " Ruby支持
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rails'
-Bundle 'stefanoverna/vim-i18n'
+"Bundle 'tpope/vim-rails'
+"Bundle 'stefanoverna/vim-i18n'
 
 filetype plugin indent on     " required!
 

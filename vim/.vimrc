@@ -3,8 +3,8 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 syntax on
 colorscheme onedark 
-set guifont=M+\ 2m:h16         " 设置字体和大小
-set lines=40 columns=200       " 设置默认窗口大小
+set guifont=M+\ 2m:h14         " 设置字体和大小
+"set lines=40 columns=200       " 设置默认窗口大小
 set clipboard+=unnamed         " use system clipboard
 set incsearch
 set smartcase
@@ -33,13 +33,13 @@ set expandtab                  " expand tab to space
 let mapleader=','
 set hidden                     " 解决文档未保存时不能使用TAB切换的问题
 set hlsearch                   " 高亮搜索结果
-"set iskeyword+=-               " 匹配使用-连接的关键词
+"set iskeyword+=-              " 匹配使用-连接的关键词
 "set splitright                " 所有文件都从右侧纵向分割打开
 set cursorline
 set cursorcolumn
 " 设置高亮列背景色，并设置快捷键开启和关闭
-hi CursorColumn ctermbg=black
-nnoremap <Leader>col :set cursorcolumn!<CR>
+"hi CursorColumn ctermbg=black
+"nnoremap <Leader>col :set cursorcolumn!<CR>
 
 " 使用TAB切换buffers
 map <s-tab> :bp<cr> 
@@ -93,6 +93,10 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
   "\ }
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public|tags)|(\.(swp|ico|git|svn|png|jpg|zip))$'
 
+" autocomplpop
+" 去掉输入.之后出现的无用列表
+let g:acp_behaviorRubyOmniMethodLength = -1
+
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
 
@@ -108,29 +112,29 @@ let g:mta_filetypes = {
 
 " ctags
 "au BufWritePost *.rb,*.ru silent! !ctags -R &
-function! DelTagOfFile(file)
-  let fullpath = a:file
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let f = substitute(fullpath, cwd . "/", "", "")
-  let f = escape(f, './')
-  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
-  let resp = system(cmd)
-endfunction
+"function! DelTagOfFile(file)
+  "let fullpath = a:file
+  "let cwd = getcwd()
+  "let tagfilename = cwd . "/tags"
+  "let f = substitute(fullpath, cwd . "/", "", "")
+  "let f = escape(f, './')
+  "let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+  "let resp = system(cmd)
+"endfunction
 
-function! UpdateTags()
-  let f = expand("%:p")
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let cmd = 'ctags -R ' . tagfilename . ' --languages=ruby --exclude=.git --exclude=.js --exclude=.css --exclude=tmp ' . '"' . f . '"'
-  call DelTagOfFile(f)
-  let resp = system(cmd)
-endfunction
-autocmd BufWritePost *.rb,*.ru call UpdateTags()
+"function! UpdateTags()
+  "let f = expand("%:p")
+  "let cwd = getcwd()
+  "let tagfilename = cwd . "/tags"
+  "let cmd = 'ctags -R ' . tagfilename . ' --languages=ruby --exclude=.git --exclude=.js --exclude=.css --exclude=tmp ' . '"' . f . '"'
+  "call DelTagOfFile(f)
+  "let resp = system(cmd)
+"endfunction
+"autocmd BufWritePost *.rb,*.ru call UpdateTags()
 
 " vim-i18n
-vmap <Leader>z :call I18nTranslateString()<CR>
-vmap <Leader>dt :call I18nDisplayTranslation()<CR>
+"vmap <Leader>z :call I18nTranslateString()<CR>
+"vmap <Leader>dt :call I18nDisplayTranslation()<CR>
 
 " Dash
 nmap <leader>dr :silent !open dash://ruby:<cword><cr>
