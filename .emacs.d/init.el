@@ -7,5 +7,7 @@
 (require 'init-elpa)
 ;; 初始化一般配置
 (require 'init-general)
+;; 初始化helm
+(require 'init-helm)
 
 (provide 'init)
