@@ -22,7 +22,13 @@
 (add-to-list 'default-frame-alist '(height . 30))
 ;; 使用主题
 (load-theme 'atom-one-dark t)
-;; 默认字体
-(set-default-font "M+ 2m-16")
+;; Setting English Font
+(set-face-attribute
+ 'default nil :font "M+ 2m 14")
+;; Setting Chinese Font
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font (frame-parameter nil 'font)
+            charset
+            (font-spec :family "PingFang SC" :size 14)))
 
 (provide 'init-general)
