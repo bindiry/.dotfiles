@@ -93,7 +93,7 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
   "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|test$\|\_site$\|target$\|tmp$',
   "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$',
   "\ }
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public|tags)|(\.(swp|ico|git|svn|png|jpg|zip))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(log|swp|ico|git|svn|png|jpg|zip))$'
 
 " autocomplpop
 " 去掉输入.之后出现的无用列表

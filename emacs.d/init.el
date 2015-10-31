@@ -3,11 +3,17 @@
 ;; 将目录lisp/添加到搜索路径中
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;; 初始化ELPA
+;; init ELPA
 (require 'init-elpa)
-;; 初始化一般配置
+;; init functions
+(require 'init-functions)
+;; init general
 (require 'init-general)
-;; 初始化helm
+;; init helm
 (require 'init-helm)
+;; init projectile
+(require 'init-projectile)
+;; init markdown
+(require 'init-markdown)
 
 (provide 'init)

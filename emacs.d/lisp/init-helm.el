@@ -2,6 +2,8 @@
 (require 'helm)
 (require 'helm-config)
 ;(require 'helm-dash)
+;(require 'helm-cmd-t)
+(require 'helm-projectile)
 
 (helm-mode 1)
 (helm-autoresize-mode 1)
@@ -14,6 +16,8 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-s") 'helm-occur)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+(global-set-key (kbd "C-x p") 'helm-projectile-find-file)
+(global-set-key (kbd "C-x o") 'helm-projectile-switch-project)
 
 (setq helm-split-window-in-side-p           t
       helm-move-to-line-cycle-in-source     t
