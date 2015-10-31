@@ -1,5 +1,8 @@
 ;; init-general.el
 
+;; delete whole line
+(global-set-key (kbd "C-c d") 'kill-whole-line)
+
 ;; 不显示工具栏
 (tool-bar-mode 0) 
 ;; 不现实菜单栏
@@ -20,6 +23,9 @@
 ;; 默认窗口大小
 (add-to-list 'default-frame-alist '(width . 140))
 (add-to-list 'default-frame-alist '(height . 30))
+;; 窗口透明
+(set-frame-parameter (selected-frame) 'alpha '(98 98))
+ (add-to-list 'default-frame-alist '(alpha 98 98))
 ;; 使用主题
 (load-theme 'atom-one-dark t)
 ;; Setting English Font

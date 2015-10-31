@@ -11,6 +11,10 @@
 (require 'init-general)
 ;; init helm
 (require 'init-helm)
+;; init robe
+(require 'init-robe)
+;; init company
+(require 'init-company)
 ;; init projectile
 (require 'init-projectile)
 ;; init markdown
