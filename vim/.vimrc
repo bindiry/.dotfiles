@@ -113,26 +113,25 @@ let g:mta_filetypes = {
     \}
 
 " ctags
-"au BufWritePost *.rb,*.ru silent! !ctags -R &
-"function! DelTagOfFile(file)
-  "let fullpath = a:file
-  "let cwd = getcwd()
-  "let tagfilename = cwd . "/tags"
-  "let f = substitute(fullpath, cwd . "/", "", "")
-  "let f = escape(f, './')
-  "let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
-  "let resp = system(cmd)
-"endfunction
+function! DelTagOfFile(file)
+  let fullpath = a:file
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let f = substitute(fullpath, cwd . "/", "", "")
+  let f = escape(f, './')
+  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
+  let resp = system(cmd)
+endfunction
 
-"function! UpdateTags()
-  "let f = expand("%:p")
-  "let cwd = getcwd()
-  "let tagfilename = cwd . "/tags"
-  "let cmd = 'ctags -R ' . tagfilename . ' --languages=ruby --exclude=.git --exclude=.js --exclude=.css --exclude=tmp ' . '"' . f . '"'
-  "call DelTagOfFile(f)
-  "let resp = system(cmd)
-"endfunction
-"autocmd BufWritePost *.rb,*.ru call UpdateTags()
+function! UpdateTags()
+  let f = expand("%:p")
+  let cwd = getcwd()
+  let tagfilename = cwd . "/tags"
+  let cmd = 'ctags -R ' . tagfilename . ' --exclude=.git --exclude=.js --exclude=.css --exclude=tmp --exclude=log ' . '"' . f . '"'
+  call DelTagOfFile(f)
+  let resp = system(cmd)
+endfunction
+autocmd BufWritePost *.rb,*.ru call UpdateTags()
 
 " vim-i18n
 "vmap <Leader>z :call I18nTranslateString()<CR>

@@ -7,6 +7,8 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
+" 输入法插件
+"Bundle 'CodeFalling/fcitx-vim-osx'
 " 快速在指定字符两边添加指定包围字符
 "Bundle 'tpope/vim-surround'
 " 符号自动补全
@@ -46,8 +48,9 @@ Bundle 'nono/jquery.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'slim-template/vim-slim'
 " Ruby支持
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
-"Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-rails'
 "Bundle 'stefanoverna/vim-i18n'
 
 filetype plugin indent on     " required!
