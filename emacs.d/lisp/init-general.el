@@ -24,17 +24,19 @@
 (add-to-list 'default-frame-alist '(width . 140))
 (add-to-list 'default-frame-alist '(height . 30))
 ;; 窗口透明
-(set-frame-parameter (selected-frame) 'alpha '(98 98))
- (add-to-list 'default-frame-alist '(alpha 98 98))
+;(set-frame-parameter (selected-frame) 'alpha '(98 98))
+ ;(add-to-list 'default-frame-alist '(alpha 98 98))
 ;; 使用主题
 (load-theme 'atom-one-dark t)
+;; reload the TAGS file automatically
+(setq tags-revert-without-query 1)
 ;; Setting English Font
 (set-face-attribute
- 'default nil :font "M+ 2m 14")
+ 'default nil :font "M+ 2m 16")
 ;; Setting Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
             charset
-            (font-spec :family "PingFang SC" :size 14)))
+            (font-spec :family "PingFang SC" :size 16)))
 
 (provide 'init-general)

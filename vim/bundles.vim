@@ -34,7 +34,8 @@ Bundle 'airblade/vim-gitgutter'
 " 状态栏显示
 Bundle 'vim-airline'
 " 代码补全
-Bundle 'vim-scripts/AutoComplPop'
+"Bundle 'vim-scripts/AutoComplPop'
+Bundle 'Valloric/YouCompleteMe'
 " Color Schemes
 "Bundle 'chriskempson/vim-tomorrow-theme'
 "Bundle 'fisadev/fisa-vim-colorscheme'

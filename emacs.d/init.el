@@ -17,6 +17,8 @@
 (require 'init-company)
 ;; init projectile
 (require 'init-projectile)
+;; init tags
+;(require 'init-tags)
 ;; init markdown
 (require 'init-markdown)
 
