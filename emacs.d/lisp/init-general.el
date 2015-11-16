@@ -32,7 +32,7 @@
 (setq tags-revert-without-query 1)
 ;; Setting English Font
 (set-face-attribute
- 'default nil :font "M+ 2m 16")
+ 'default nil :font "M+ 2m 14")
 ;; Setting Chinese Font
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font (frame-parameter nil 'font)
