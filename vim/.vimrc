@@ -38,8 +38,8 @@ set hlsearch                   " 高亮搜索结果
 "set splitright                " 所有文件都从右侧纵向分割打开
 set cursorline
 set cursorcolumn
-set colorcolumn=120
-hi ColorColumn ctermbg=238
+"set colorcolumn=120
+"hi ColorColumn ctermbg=238
 " 设置高亮列背景色，并设置快捷键开启和关闭
 "hi CursorColumn ctermbg=black
 "nnoremap <Leader>col :set cursorcolumn!<CR>
@@ -94,7 +94,7 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
   "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|test$\|\_site$\|target$\|tmp$',
   "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$',
   "\ }
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(log|swp|ico|git|svn|png|jpg|zip))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(log|swp|ico|git|svn|png|jpg|zip|gif|ttf|svg|woff|eot))$'
 
 " autocomplpop
 " 去掉输入.之后出现的无用列表

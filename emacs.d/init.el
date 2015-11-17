@@ -21,5 +21,7 @@
 ;(require 'init-tags)
 ;; init markdown
 (require 'init-markdown)
+;; init expand-region
+(require 'init-expand-region)
 
 (provide 'init)
