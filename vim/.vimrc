@@ -36,6 +36,7 @@ set hidden                     " 解决文档未保存时不能使用TAB切换�
 set hlsearch                   " 高亮搜索结果
 "set iskeyword+=-              " 匹配使用-连接的关键词
 "set splitright                " 所有文件都从右侧纵向分割打开
+set nobackup                   " 设置不生成备份文件
 set cursorline
 set cursorcolumn
 "set colorcolumn=120
@@ -114,26 +115,7 @@ let g:mta_filetypes = {
     \}
 
 " ctags
-function! DelTagOfFile(file)
-  let fullpath = a:file
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let f = substitute(fullpath, cwd . "/", "", "")
-  let f = escape(f, './')
-  let cmd = 'sed -i "/' . f . '/d" "' . tagfilename . '"'
-  let resp = system(cmd)
-endfunction
-
-function! UpdateTags()
-  let f = expand("%:p")
-  let cwd = getcwd()
-  let tagfilename = cwd . "/tags"
-  let cmd = 'ctags -R ' . tagfilename . ' --exclude=.git --exclude=.js --exclude=.css --exclude=tmp --exclude=log ' . '"' . f . '"'
-  call DelTagOfFile(f)
-  let resp = system(cmd)
-endfunction
-autocmd BufWritePost *.rb,*.ru call UpdateTags()
-
+au BufWritePost *.rb,*.ru silent! !ctags -R --languages=ruby &
 " vim-i18n
 "vmap <Leader>z :call I18nTranslateString()<CR>
 "vmap <Leader>dt :call I18nDisplayTranslation()<CR>

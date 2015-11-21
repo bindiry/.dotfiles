@@ -52,6 +52,7 @@ Bundle 'slim-template/vim-slim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+Bundle 'KurtPreston/vim-autoformat-rails'
 "Bundle 'stefanoverna/vim-i18n'
 
 filetype plugin indent on     " required!
