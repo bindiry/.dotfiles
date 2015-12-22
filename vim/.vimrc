@@ -3,10 +3,10 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 syntax on
 colorscheme onedark 
-set guifont=M+\ 2m:h14         " 设置字体和大小
+set guifont=M+\ 2m:h16         " 设置字体和大小
 "set lines=40 columns=200       " 设置默认窗口大小
 set clipboard+=unnamed         " use system clipboard
-xnoremap p pgvy                " 持续粘贴
+"xnoremap p pgvy                " 持续粘贴
 set incsearch
 set smartcase
 set nocompatible               " discard vi
@@ -99,7 +99,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|pu
 
 " autocomplpop
 " 去掉输入.之后出现的无用列表
-let g:acp_behaviorRubyOmniMethodLength = -1
+"let g:acp_behaviorRubyOmniMethodLength = -1
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
@@ -117,9 +117,13 @@ let g:mta_filetypes = {
 " ctags
 au BufWritePost *.rb,*.ru silent! !ctags -R --languages=ruby &
 " vim-i18n
-"vmap <Leader>z :call I18nTranslateString()<CR>
-"vmap <Leader>dt :call I18nDisplayTranslation()<CR>
+vmap <Leader>z :call I18nTranslateString()<CR>
+vmap <Leader>dt :call I18nDisplayTranslation()<CR>
 
 " Dash
 nmap <leader>dr :silent !open dash://ruby:<cword><cr>
 nmap <leader>da :silent !open dash://rails:<cword><cr>
+
+" indentline
+"let g:indentLine_color_term = 239
+"let g:indentLine_color_gui = '#555555'

@@ -13,6 +13,8 @@ Bundle 'gmarik/vundle'
 "Bundle 'tpope/vim-surround'
 " 符号自动补全
 Bundle 'Raimondi/delimitMate'
+" 代码对齐参考线
+"Bundle 'Yggdroot/indentLine'
 " 代码搜索
 Bundle 'mileszs/ack.vim'
 " HTML代码自动生成
@@ -53,7 +55,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
 Bundle 'KurtPreston/vim-autoformat-rails'
-"Bundle 'stefanoverna/vim-i18n'
+Bundle 'stefanoverna/vim-i18n'
 
 filetype plugin indent on     " required!
 
