@@ -1,61 +1,51 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+call plug#begin('~/.vim/plugged')
 
-set rtp+=~/.dotfiles/vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-" 输入法插件
-"Bundle 'CodeFalling/fcitx-vim-osx'
+" buffer管理
+"Plug 'fholgado/minibufexpl.vim'
 " 快速在指定字符两边添加指定包围字符
-"Bundle 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 " 符号自动补全
-Bundle 'Raimondi/delimitMate'
+Plug 'Raimondi/delimitMate'
 " 代码对齐参考线
-"Bundle 'Yggdroot/indentLine'
+"Plug 'Yggdroot/indentLine'
 " 代码搜索
-Bundle 'mileszs/ack.vim'
+Plug 'mileszs/ack.vim'
 " HTML代码自动生成
-Bundle 'mattn/emmet-vim'
+Plug 'mattn/emmet-vim'
 " 高亮html标签
-"Bundle 'Valloric/MatchTagAlways'
+"Plug 'Valloric/MatchTagAlways'
 " 支持多语言的注释
-Bundle 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'
 " 树形目录
-Bundle 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 " 文件快速检索
-Bundle 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 " Git支持
-Bundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " 在文件内容左侧显示git状态
-Bundle 'airblade/vim-gitgutter'
-" 代码两端对齐
-"Bundle 'godlygeek/tabular'
+Plug 'airblade/vim-gitgutter'
 " 状态栏显示
-Bundle 'vim-airline'
+Plug 'vim-airline'
 " 代码补全
-"Bundle 'vim-scripts/AutoComplPop'
-Bundle 'Valloric/YouCompleteMe'
+"Plug 'vim-scripts/AutoComplPop'
+Plug 'Valloric/YouCompleteMe'
 " Color Schemes
-"Bundle 'chriskempson/vim-tomorrow-theme'
-"Bundle 'fisadev/fisa-vim-colorscheme'
-"Bundle 'fatih/molokai'
-Bundle 'mhumeSF/one-dark.vim'
+"Plug 'chriskempson/vim-tomorrow-theme'
+"Plug 'fisadev/fisa-vim-colorscheme'
+"Plug 'fatih/molokai'
+Plug 'mhumeSF/one-dark.vim'
 " 语法支持
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'nono/jquery.vim'
-Bundle 'tpope/vim-markdown'
-Bundle 'slim-template/vim-slim'
+Plug 'tpope/vim-haml'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'nono/jquery.vim'
+Plug 'tpope/vim-markdown'
+Plug 'slim-template/vim-slim'
 " Ruby支持
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rails'
-Bundle 'KurtPreston/vim-autoformat-rails'
-Bundle 'stefanoverna/vim-i18n'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'KurtPreston/vim-autoformat-rails'
+Plug 'stefanoverna/vim-i18n'
 
-filetype plugin indent on     " required!
-
+call plug#end()

@@ -45,9 +45,6 @@ set cursorcolumn
 "hi CursorColumn ctermbg=black
 "nnoremap <Leader>col :set cursorcolumn!<CR>
 
-" 使用TAB切换buffers
-map <s-tab> :bp<cr> 
-map <tab> :bn<cr>
 " 在注释行换行时，不自动添加注释字符
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -84,22 +81,33 @@ nmap ,m :NERDTreeToggle<CR>
 " 如果打开的文件只剩nerdtree，则直接退出，避免多次:q
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 
+" delimitMate
+let delimitMate_nesting_quotes = ['"','`']
+au FileType python let b:delimitMate_nesting_quotes = ['"']
+au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}"
+
 " 查找项目目录中的TODO列表
 noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " ctrlp
-"set wildignore+=*/tmp/*,*/.git/*,*/.hg/*,*/.svn/*,*/bower_components/*,"/node_modules/*,*/_site/*,*/target/*,
-  "\ *.so,*.swp,*.zip,*.ico,*.jpg,*.png
-"unlet g:ctrlp_custom_ignore
 "let g:ctrlp_custom_ignore = {
-  "\ 'dir':  '\.git$\|\.hg$\|\.svn$\|bower_components$\|dist$\|node_modules$\|test$\|\_site$\|target$\|tmp$',
-  "\ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$\|\.swp$\|\.ico$',
-  "\ }
+  "\ 'dir':  '\v[\/](\.(git|hg|svn)|\_site)$',
+  "\ 'file': '\v\.(exe|so|dll|class|png|jpg|jpeg)$',
+"\}
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(log|swp|ico|git|svn|png|jpg|zip|gif|ttf|svg|woff|eot))$'
+nmap <leader>p :CtrlP<CR>
+nmap <leader>bb :CtrlPBuffer<CR>
+nmap <leader>bm :CtrlPMixed<CR>
+nmap <leader>bs :CtrlPMRU<CR>
 
-" autocomplpop
-" 去掉输入.之后出现的无用列表
-"let g:acp_behaviorRubyOmniMethodLength = -1
+" gitgutter
+let g:gitgutter_map_keys = 0
+
+" 使用TAB切换buffers
+nmap <leader>l :bn<CR>
+nmap <leader>h :bp<CR>
+nmap <leader>bq :bp <BAR> bd #<CR>
+nmap <leader>bl :ls<CR>
 
 " emmet
 "let g:user_emmet_expandabbr_key = '<C-e>'
