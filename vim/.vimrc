@@ -1,9 +1,10 @@
+:cd /Users/bindiry/workspace
 source ~/.dotfiles/vim/bundles.vim
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 syntax on
 colorscheme onedark 
-set guifont=M+\ 2m:h16         " 设置字体和大小
+set guifont=M+\ 2m:h14         " 设置字体和大小
 "set lines=40 columns=200       " 设置默认窗口大小
 set clipboard+=unnamed         " use system clipboard
 "xnoremap p pgvy                " 持续粘贴
@@ -135,3 +136,8 @@ nmap <leader>da :silent !open dash://rails:<cword><cr>
 " indentline
 "let g:indentLine_color_term = 239
 "let g:indentLine_color_gui = '#555555'
+
+" youdao
+vnoremap <silent> <C-T> <Esc>:Ydv<CR> 
+nnoremap <silent> <C-T> <Esc>:Ydc<CR> 
+noremap <leader>yd :Yde<CR>

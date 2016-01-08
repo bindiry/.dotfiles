@@ -46,6 +46,8 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'KurtPreston/vim-autoformat-rails'
-Plug 'stefanoverna/vim-i18n'
+"Plug 'stefanoverna/vim-i18n'
+" 有道翻译
+Plug 'ianva/vim-youdao-translater'
 
 call plug#end()
