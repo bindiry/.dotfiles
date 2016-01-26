@@ -1,3 +1,4 @@
+let g:python_host_prog='/usr/bin/python'
 call plug#begin('~/.vim/plugged')
 
 " buffer管理
@@ -28,7 +29,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'vim-airline'
 " 代码补全
 "Plug 'vim-scripts/AutoComplPop'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 " Color Schemes
 "Plug 'chriskempson/vim-tomorrow-theme'
 "Plug 'fisadev/fisa-vim-colorscheme'

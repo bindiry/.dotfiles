@@ -45,6 +45,7 @@ set cursorcolumn
 " 设置高亮列背景色，并设置快捷键开启和关闭
 "hi CursorColumn ctermbg=black
 "nnoremap <Leader>col :set cursorcolumn!<CR>
+xnoremap p "_dP"
 
 " 在注释行换行时，不自动添加注释字符
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
