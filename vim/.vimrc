@@ -51,6 +51,8 @@ cmap w!! w !sudo tee >/dev/null %
 nnoremap U <C-r>
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
 set scrolloff=7
+" 禁用Ex mode
+map Q <Nop>
 
 " 在注释行换行时，不自动添加注释字符
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -147,3 +149,6 @@ nmap <leader>da :silent !open dash://rails:<cword><cr>
 vnoremap <silent> <C-T> <Esc>:Ydv<CR> 
 nnoremap <silent> <C-T> <Esc>:Ydc<CR> 
 noremap <leader>yd :Yde<CR>
+
+" puts the caller
+nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
