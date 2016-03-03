@@ -28,12 +28,11 @@ Plug 'airblade/vim-gitgutter'
 " 状态栏显示
 Plug 'vim-airline'
 " 代码补全
+"Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/deoplete.nvim'
 "Plug 'vim-scripts/AutoComplPop'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 " Color Schemes
-"Plug 'chriskempson/vim-tomorrow-theme'
-"Plug 'fisadev/fisa-vim-colorscheme'
-"Plug 'fatih/molokai'
 Plug 'mhumeSF/one-dark.vim'
 " 语法支持
 Plug 'tpope/vim-haml'
@@ -49,6 +48,6 @@ Plug 'tpope/vim-rails'
 Plug 'KurtPreston/vim-autoformat-rails'
 "Plug 'stefanoverna/vim-i18n'
 " 有道翻译
-Plug 'ianva/vim-youdao-translater'
+"Plug 'ianva/vim-youdao-translater'
 
 call plug#end()
