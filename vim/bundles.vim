@@ -10,7 +10,8 @@ Plug 'Raimondi/delimitMate'
 " 代码对齐参考线
 "Plug 'Yggdroot/indentLine'
 " 代码搜索
-Plug 'mileszs/ack.vim'
+Plug 'rking/ag.vim'
+"Plug 'mileszs/ack.vim'
 " HTML代码自动生成
 Plug 'mattn/emmet-vim'
 " 高亮html标签

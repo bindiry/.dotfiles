@@ -2,4 +2,6 @@
 
 git clone https://github.com/gmarik/vundle.git ~/.dotfiles/vim/bundle/vundle
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
+brew install ctags
+brew install the_silver_searcher
 
