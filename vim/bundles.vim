@@ -14,8 +14,8 @@ Plug 'airblade/vim-gitgutter'
 " status bar
 Plug 'vim-airline'
 " code completion
-"Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/neocomplete.vim'
+"Plug 'Shougo/deoplete.nvim'
 "Plug 'vim-scripts/AutoComplPop'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 Plug 'Raimondi/delimitMate'
