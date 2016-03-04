@@ -1,54 +1,45 @@
 let g:python_host_prog='/usr/bin/python'
 call plug#begin('~/.vim/plugged')
 
-" buffer管理
-"Plug 'fholgado/minibufexpl.vim'
-" 快速在指定字符两边添加指定包围字符
-"Plug 'tpope/vim-surround'
-" 符号自动补全
-Plug 'Raimondi/delimitMate'
-" 代码对齐参考线
-"Plug 'Yggdroot/indentLine'
-" 代码搜索
-Plug 'rking/ag.vim'
-"Plug 'mileszs/ack.vim'
-" HTML代码自动生成
-Plug 'mattn/emmet-vim'
-" 高亮html标签
-"Plug 'Valloric/MatchTagAlways'
-" 支持多语言的注释
-Plug 'scrooloose/nerdcommenter'
-" 树形目录
+" files manager
 Plug 'scrooloose/nerdtree'
-" 文件快速检索
 Plug 'kien/ctrlp.vim'
-" Git支持
+" search
+Plug 'rking/ag.vim'
+" code comment
+Plug 'scrooloose/nerdcommenter'
+" git status
 Plug 'tpope/vim-fugitive'
-" 在文件内容左侧显示git状态
 Plug 'airblade/vim-gitgutter'
-" 状态栏显示
+" status bar
 Plug 'vim-airline'
-" 代码补全
+" code completion
 "Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/deoplete.nvim'
 "Plug 'vim-scripts/AutoComplPop'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-" Color Schemes
+Plug 'Raimondi/delimitMate'
+Plug 'tpope/vim-surround'
+" color schemes
 Plug 'mhumeSF/one-dark.vim'
-" 语法支持
+" syntax highlighting
 Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
 Plug 'nono/jquery.vim'
 Plug 'tpope/vim-markdown'
 Plug 'slim-template/vim-slim'
-" Ruby支持
+" front-end
+Plug 'mattn/emmet-vim'
+" ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'KurtPreston/vim-autoformat-rails'
 "Plug 'stefanoverna/vim-i18n'
-" 有道翻译
+" other
+"Plug 'fholgado/minibufexpl.vim'
+"Plug 'Yggdroot/indentLine'
 "Plug 'ianva/vim-youdao-translater'
 
 call plug#end()
