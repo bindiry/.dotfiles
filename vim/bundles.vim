@@ -40,6 +40,6 @@ Plug 'KurtPreston/vim-autoformat-rails'
 " other
 "Plug 'fholgado/minibufexpl.vim'
 "Plug 'Yggdroot/indentLine'
-"Plug 'ianva/vim-youdao-translater'
+Plug 'ianva/vim-youdao-translater'
 
 call plug#end()

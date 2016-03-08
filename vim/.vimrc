@@ -111,7 +111,7 @@ au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}"
 noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " ctrlp
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(log|swp|ico|git|svn|png|jpg|zip|gif|ttf|svg|woff|eot))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(log|swp|ico|git|svn|png|jpg|zip|gif|ttf|svg|woff|eot|DS_Store|keep))$'
 let g:ctrlp_show_hidden = 1
 nmap <leader>p :CtrlP<CR>
 nmap <leader>bb :CtrlPBuffer<CR>
@@ -138,6 +138,7 @@ let g:gitgutter_map_keys = 0
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#max_list = 20
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplete#sources#dictionary#dictionaries = {
