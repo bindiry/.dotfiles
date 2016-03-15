@@ -23,14 +23,14 @@ Plug 'tpope/vim-surround'
 " color schemes
 Plug 'mhumeSF/one-dark.vim'
 " syntax highlighting
-Plug 'tpope/vim-haml'
+"Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
 Plug 'kchmck/vim-coffee-script'
 Plug 'nono/jquery.vim'
 Plug 'tpope/vim-markdown'
 Plug 'slim-template/vim-slim'
 " front-end
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 " ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
@@ -40,6 +40,6 @@ Plug 'KurtPreston/vim-autoformat-rails'
 " other
 "Plug 'fholgado/minibufexpl.vim'
 "Plug 'Yggdroot/indentLine'
-Plug 'ianva/vim-youdao-translater'
+"Plug 'ianva/vim-youdao-translater'
 
 call plug#end()
