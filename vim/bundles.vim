@@ -9,8 +9,8 @@ Plug 'rking/ag.vim'
 " code comment
 Plug 'scrooloose/nerdcommenter'
 " git status
-Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+"Plug 'tpope/vim-fugitive'
+"Plug 'airblade/vim-gitgutter'
 " status bar
 Plug 'vim-airline'
 " code completion
