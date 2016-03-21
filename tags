@@ -1,0 +1,78 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+HTTPVersion	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^                                           :HTTPVersion => "1.1")$/;"	c
+IncludesTracker	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^    class IncludesTracker$/;"	c	class:Robe.Sash
+InputBufferSize	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^          req = WEBrick::HTTPRequest.new(:InputBufferSize => 1024,$/;"	c
+Invalidator	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^        module Invalidator$/;"	m	class:Robe.Sash.IncludesTracker
+JVisor	emacs.d/elpa/robe-20150927.2217/lib/robe/jvisor.rb	/^  class JVisor < Visor$/;"	c	class:Robe
+Logger	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^                                           :Logger => error_logger,$/;"	c
+Logger	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^                                         :Logger => error_logger)$/;"	c
+MethodScanner	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^  class MethodScanner < Scanner$/;"	c	class:Robe
+Module	emacs.d/elpa/robe-20150927.2217/lib/robe/core_ext.rb	/^class Module$/;"	c
+ModuleScanner	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^  class ModuleScanner < Scanner$/;"	c	class:Robe
+OutputBufferSize	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^          resp = WEBrick::HTTPResponse.new(:OutputBufferSize => 1024,$/;"	c
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe.rb	/^module Robe$/;"	m
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe/jvisor.rb	/^module Robe$/;"	m
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^module Robe$/;"	m
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^module Robe$/;"	m
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^module Robe$/;"	m
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^module Robe$/;"	m
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe/type_space.rb	/^module Robe$/;"	m
+Robe	emacs.d/elpa/robe-20150927.2217/lib/robe/visor.rb	/^module Robe$/;"	m
+Sash	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^  class Sash$/;"	c	class:Robe
+Sash	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^  class Sash$/;"	c	class:Robe
+Scanner	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^  class Scanner$/;"	c	class:Robe
+Server	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^  class Server$/;"	c	class:Robe
+TypeSpace	emacs.d/elpa/robe-20150927.2217/lib/robe/type_space.rb	/^  class TypeSpace$/;"	c	class:Robe
+Visor	emacs.d/elpa/robe-20150927.2217/lib/robe/visor.rb	/^  class Visor$/;"	c	class:Robe
+__singleton_class__?	emacs.d/elpa/robe-20150927.2217/lib/robe/core_ext.rb	/^    def __singleton_class__?$/;"	f	class:Module
+call	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def call(path, body)$/;"	f	class:Robe.Sash
+class_locations	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def class_locations(name, mod)$/;"	f	class:Robe.Sash
+complete_const	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def complete_const(prefix, mod)$/;"	f	class:Robe.Sash
+complete_const_in_module	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def complete_const_in_module(tail, base)$/;"	f	class:Robe.Sash
+complete_method	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def complete_method(prefix, target, mod, instance)$/;"	f	class:Robe.Sash
+descendants	emacs.d/elpa/robe-20150927.2217/lib/robe/jvisor.rb	/^    def descendants(cls)$/;"	f	class:Robe.JVisor
+descendants	emacs.d/elpa/robe-20150927.2217/lib/robe/visor.rb	/^    def descendants(cls)$/;"	f	class:Robe.Visor
+doc_for	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def doc_for(mod, inst, sym)$/;"	f	class:Robe.Sash
+each_object	emacs.d/elpa/robe-20150927.2217/lib/robe/jvisor.rb	/^    def each_object(mod)$/;"	f	class:Robe.JVisor
+extended	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^          def extended(other)$/;"	f	class:Robe.Sash.IncludesTracker
+extended	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^          def extended(other)$/;"	f	class:Robe.Sash.IncludesTracker.Invalidator
+filter_targets!	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def filter_targets!(space, targets, instance, sym)$/;"	f	class:Robe.Sash
+find_method	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def find_method(mod, inst, sym)$/;"	f	class:Robe.Sash
+find_method_owner	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def find_method_owner(mod, inst, sym)$/;"	f	class:Robe.Sash
+guess_target_type	emacs.d/elpa/robe-20150927.2217/lib/robe/type_space.rb	/^    def guess_target_type(target, mod)$/;"	f	class:Robe.TypeSpace
+included	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^          def included(other)$/;"	f	class:Robe.Sash.IncludesTracker
+included	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^          def included(other)$/;"	f	class:Robe.Sash.IncludesTracker.Invalidator
+init_name_cache	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def init_name_cache$/;"	f	class:Robe.Sash
+initialize	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def initialize(visor = pick_visor)$/;"	f	class:Robe.Sash
+initialize	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^    def initialize(*args)$/;"	f	class:Robe.MethodScanner
+initialize	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^    def initialize(sym, check_private)$/;"	f	class:Robe.Scanner
+initialize	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^    def initialize(handler, port)$/;"	f	class:Robe.Server
+initialize	emacs.d/elpa/robe-20150927.2217/lib/robe/type_space.rb	/^    def initialize(visor, target, mod, instance, superc)$/;"	f	class:Robe.TypeSpace
+maybe_scan	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^      def self.maybe_scan$/;"	F	class:Robe.Sash.IncludesTracker
+method_owner_and_inst	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^      def self.method_owner_and_inst(owner, name_cache)$/;"	F	class:Robe.Sash.IncludesTracker
+method_spec	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def method_spec(method)$/;"	f	class:Robe.Sash
+method_targets	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def method_targets(name, target, mod, instance, superc, conservative)$/;"	f	class:Robe.Sash
+modules	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def modules$/;"	f	class:Robe.Sash
+pick_visor	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def pick_visor$/;"	f	class:Robe.Sash
+ping	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def ping$/;"	f	class:Robe.Sash
+rails_refresh	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def rails_refresh$/;"	f	class:Robe.Sash
+reset	emacs.d/elpa/robe-20150927.2217/lib/robe/sash/includes_tracker.rb	/^      def self.reset!$/;"	F	class:Robe.Sash.IncludesTracker
+resolve_const	emacs.d/elpa/robe-20150927.2217/lib/robe/visor.rb	/^    def resolve_const(name)$/;"	f	class:Robe.Visor
+resolve_context	emacs.d/elpa/robe-20150927.2217/lib/robe/visor.rb	/^    def resolve_context(name, mod)$/;"	f	class:Robe.Visor
+resolve_path	emacs.d/elpa/robe-20150927.2217/lib/robe/visor.rb	/^    def resolve_path(name)$/;"	f	class:Robe.Visor
+resolve_path_elems	emacs.d/elpa/robe-20150927.2217/lib/robe/visor.rb	/^    def resolve_path_elems(nesting, init = Object)$/;"	f	class:Robe.Visor
+scan	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^    def scan(modules, check_instance, check_module)$/;"	f	class:Robe.Scanner
+scan_methods	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^    def scan_methods(mod, coll)$/;"	f	class:Robe.MethodScanner
+scan_methods	emacs.d/elpa/robe-20150927.2217/lib/robe/scanners.rb	/^    def scan_methods(mod, coll)$/;"	f	class:Robe.ModuleScanner
+scan_with	emacs.d/elpa/robe-20150927.2217/lib/robe/type_space.rb	/^    def scan_with(scanner)$/;"	f	class:Robe.TypeSpace
+shutdown	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^    def shutdown$/;"	f	class:Robe.Server
+start	emacs.d/elpa/robe-20150927.2217/lib/robe.rb	/^    def start(port = 0)$/;"	f	class:Robe
+start	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^    def start$/;"	f	class:Robe.Server
+stop	emacs.d/elpa/robe-20150927.2217/lib/robe.rb	/^    def stop$/;"	f	class:Robe
+targets	emacs.d/elpa/robe-20150927.2217/lib/robe/sash.rb	/^    def targets(obj)$/;"	f	class:Robe.Sash
+wait_for_it	emacs.d/elpa/robe-20150927.2217/lib/robe/server.rb	/^    def wait_for_it$/;"	f	class:Robe.Server

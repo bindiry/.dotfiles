@@ -105,7 +105,8 @@ nmap ,m :NERDTreeToggle<CR>
 " delimitMate
 let delimitMate_nesting_quotes = ['"','`']
 au FileType python let b:delimitMate_nesting_quotes = ['"']
-au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}"
+au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}" b:delimitMate_nesting_quotes = ['<']
+au FileType slim,javascript let b:delimitMate_nesting_quotes = ['<']
 
 " 查找项目目录中的TODO列表
 noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
@@ -209,11 +210,6 @@ au BufWritePost *.rb,*.ru silent! !ctags -R --languages=ruby &
 " Dash
 nmap <leader>dr :silent !open dash://ruby:<cword><cr>
 nmap <leader>da :silent !open dash://rails:<cword><cr>
-
-" youdao
-noremap <silent> <C-T> <Esc>:Ydv<CR> 
-nnoremap <silent> <C-T> <Esc>:Ydc<CR> 
-noremap <leader>yd :Yde<CR>
 
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
