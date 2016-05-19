@@ -41,5 +41,9 @@ Plug 'KurtPreston/vim-autoformat-rails'
 "Plug 'fholgado/minibufexpl.vim'
 "Plug 'Yggdroot/indentLine'
 "Plug 'ianva/vim-youdao-translater'
+" auto handle blank code
+Plug 'bitc/vim-bad-whitespace'
+" auto switch input method
+Plug 'ybian/smartim'
 
 call plug#end()
