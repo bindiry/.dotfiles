@@ -22,6 +22,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
 ln -s ~/.dotfiles/.ctags ~/.ctags
 ln -s ~/.dotfiles/.gemrc ~/.gemrc
+mkdir -p ~/.aria2
+ln -s ~/.dotfiles/.aria2/aria2.conf ~/.aria2/aria2.conf
 
 # .zshrc
 cat >> ~/.zshrc<<EOF
@@ -45,6 +47,13 @@ function stop_lantern {
     export ftp_proxy=
     export rsync_proxy=
     export no_proxy=
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+    sudo killall -9 networkd
+}
+
+function start_aria2 {
+  aria2c --conf-path="/Users/bindiry/.aria2/aria2.conf" -D
 }
 EOF
 

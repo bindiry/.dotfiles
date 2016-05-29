@@ -9,15 +9,16 @@ Plug 'rking/ag.vim'
 " code comment
 Plug 'scrooloose/nerdcommenter'
 " git status
-"Plug 'tpope/vim-fugitive'
-"Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " status bar
 Plug 'vim-airline'
 " code completion
 Plug 'Shougo/neocomplete.vim'
-"Plug 'Shougo/deoplete.nvim'
 "Plug 'vim-scripts/AutoComplPop'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+" for neovim
+"Plug 'Shougo/deoplete.nvim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 " color schemes
@@ -36,11 +37,6 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'KurtPreston/vim-autoformat-rails'
-"Plug 'stefanoverna/vim-i18n'
-" other
-"Plug 'fholgado/minibufexpl.vim'
-"Plug 'Yggdroot/indentLine'
-"Plug 'ianva/vim-youdao-translater'
 " auto handle blank code
 Plug 'bitc/vim-bad-whitespace'
 " auto switch input method
