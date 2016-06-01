@@ -41,5 +41,7 @@ Plug 'KurtPreston/vim-autoformat-rails'
 Plug 'bitc/vim-bad-whitespace'
 " auto switch input method
 Plug 'ybian/smartim'
+" indent
+"Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()
