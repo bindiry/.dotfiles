@@ -31,4 +31,3 @@ brew cask install lantern
 brew cask install vlc
 brew cask install youdao
 brew cask install macdown
-brew cask install gimp
