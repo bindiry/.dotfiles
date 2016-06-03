@@ -15,6 +15,7 @@ ln -s ~/.dotfiles/.ctags ~/.ctags
 ln -s ~/.dotfiles/.gemrc ~/.gemrc
 mkdir -p ~/.aria2
 ln -s ~/.dotfiles/.aria2/aria2.conf ~/.aria2/aria2.conf
+ln -s ~/.dotfiles/dnsmasq.conf /usr/local/etc/dnsmasq.conf
 
 # .zshrc
 cat >> ~/.zshrc<<EOF
