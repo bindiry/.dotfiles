@@ -1,3 +1,5 @@
 .projectile
 tags
 .ctags
+*.swp
+*.swo
