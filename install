@@ -47,6 +47,14 @@ function stop_lantern {
 function start_aria2 {
   aria2c --conf-path="/Users/bindiry/.aria2/aria2.conf" -D
 }
+
+function sync_dotfiles {
+  cd ~/.dotfiles
+  git add -A
+  git commit -m 'udpate'
+  git pull
+  git push
+}
 EOF
 
 # vim
