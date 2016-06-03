@@ -16,6 +16,18 @@ ln -s ~/.dotfiles/.gemrc ~/.gemrc
 mkdir -p ~/.aria2
 ln -s ~/.dotfiles/.aria2/aria2.conf ~/.aria2/aria2.conf
 ln -s ~/.dotfiles/dnsmasq.conf /usr/local/etc/dnsmasq.conf
+sudo brew services start dnsmasq
+# get rules from https://github.com/ranmocy/chnroutes
+mkdir -p ~/scripts
+git clone git@github.com:ranmocy/chnroutes.git
+cd chnroutes && python chnroutes.py -p mac -t ipsec && cd ..
+touch vpnreset && chmod +x vpnreset
+cat >> vpnreset<<EOF
+#!/bin/sh
+sudo sh ~/scripts/phase1-down.sh
+sudo sh ~/scripts/phase1-up.sh
+exit
+EOF
 
 # .zshrc
 cat >> ~/.zshrc<<EOF
@@ -36,7 +48,6 @@ function stop_lantern {
     export http_proxy=
     export https_proxy=
     export ftp_proxy=
-    export ftp_proxy=
     export rsync_proxy=
     export no_proxy=
     sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
@@ -47,16 +58,5 @@ function stop_lantern {
 function start_aria2 {
   aria2c --conf-path="/Users/bindiry/.aria2/aria2.conf" -D
 }
-
-function sync_dotfiles {
-  cd ~/.dotfiles
-  git add -A
-  git commit -m 'udpate'
-  git pull
-  git push
-}
 EOF
-
-# vim
-# PlugInstall
 

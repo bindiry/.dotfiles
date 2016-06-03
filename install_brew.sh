@@ -11,10 +11,10 @@ brew install ctags
 brew install the_silver_searcher
 brew install aria2
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qall
 brew instal dnsmasq
-cp /usr/local/opt/dnsmasq/dnsmasq.conf.example /usr/local/etc/dnsmasq.conf
-sudo brew services start dnsmasq
-# chnroutes https://github.com/ranmocy/chnroutes
+#cp /usr/local/opt/dnsmasq/dnsmasq.conf.example /usr/local/etc/dnsmasq.conf
+#sudo brew services start dnsmasq
 
 brew tap caskroom/cask
 brew cask install google-chrome
