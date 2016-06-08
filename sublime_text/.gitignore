@@ -1,1 +1,6 @@
 *.cache/
+*.merged-ca-bundle
+*.last-run
+*.system-ca-bundle
+*.user-ca-bundle
+*.sublime-macro
