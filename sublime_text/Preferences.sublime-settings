@@ -1,0 +1,45 @@
+{
+	"color_scheme": "Packages/One Dark Color Scheme/One Dark.tmTheme",
+	"default_line_ending": "unix",
+	"detect_indentation": true,
+	"draw_white_space": "selection",
+	"file_exclude_patterns":
+	[
+		"*.swp",
+		".DS_Store",
+		"tags"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		".svn",
+		".idea",
+		"tmp",
+		"node_modules"
+	],
+	"font_face": "M+ 2m",
+	"font_size": 16,
+	"gutter": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_numbers": true,
+	"line_padding_bottom": 0.8,
+	"remember_open_files": false,
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"sidebar_size_13": true,
+	"tab_size": 2,
+	"tabs_medium": true,
+	"theme": "Spacegray.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"tree_animation_enabled": true,
+	"use_simple_full_screen": false,
+	"use_tab_stops": true,
+	"vintage_ctrl_keys": true,
+	"vintage_start_in_command_mode": false,
+	"word_wrap": false,
+	"wrap_width": "auto"
+}

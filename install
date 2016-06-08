@@ -27,9 +27,11 @@ sudo brew services start dnsmasq
 
 # install apps
 brew tap caskroom/cask
+brew tap caskroom/versions
 brew cask install google-chrome
+brew cask install iterm2
 brew cask install the-unarchiver
-brew cask install sublime-text
+brew cask install sublime-text3
 brew cask install dropbox
 brew cask install karabiner
 brew cask install sequel-pro
@@ -42,7 +44,22 @@ brew cask install vlc
 brew cask install youdao
 brew cask install macdown
 
+# install Prezto
+zsh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+chsh -s /bin/zsh
+
+# set sublime text
+cd ~/Library/"Application Support"/"Sublime Text 3"/Packages
+rm -rf User
+ln -s ~/.dotfiles/sublime_text ~/Library/"Application Support"/"Sublime Text 3"/Packages/User
+
 # install mpv
+cd ~
 brew install mpv --with-bundle
 brew linkapps mpv
 ln -s ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
@@ -54,15 +71,6 @@ do
 	duti -s io.mpv $ext all
 	duti -s io.mpv $lower all
 done
-
-# install Prezto
-zsh
-git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-setopt EXTENDED_GLOB
-for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-  ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-done
-chsh -s /bin/zsh
 
 # install iptable rules from https://github.com/ranmocy/chnroutes
 mkdir -p ~/scripts
