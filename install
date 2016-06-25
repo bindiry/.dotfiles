@@ -3,7 +3,7 @@
 
 brew install wget
 brew install curl
-brew install git
+# brew install git
 
 # install vim
 brew install python3
@@ -26,21 +26,19 @@ ln -s ~/.dotfiles/dnsmasq.conf /usr/local/etc/dnsmasq.conf
 sudo brew services start dnsmasq
 
 # install apps
-brew tap caskroom/cask
-brew tap caskroom/versions
-brew cask install google-chrome
+# brew cask install google-chrome
 brew cask install iterm2
 brew cask install the-unarchiver
 brew cask install sublime-text3
 brew cask install dropbox
 brew cask install karabiner
-brew cask install sequel-pro
+# brew cask install sequel-pro
 brew cask install appcleaner
-brew cask install coteditor
+# brew cask install coteditor
 brew cask install datagrip
 brew cask install firefox
-brew cask install lantern
-brew cask install vlc
+# brew cask install lantern
+# brew cask install vlc
 brew cask install youdao
 brew cask install macdown
 brew cask install wwdc
@@ -74,16 +72,16 @@ do
 done
 
 # install iptable rules from https://github.com/ranmocy/chnroutes
-mkdir -p ~/scripts
-git clone git@github.com:ranmocy/chnroutes.git
-cd chnroutes && python chnroutes.py -p mac -t ipsec && cd ..
-touch vpnreset && chmod +x vpnreset
-cat >> vpnreset<<EOF
-#!/bin/sh
-sudo sh ~/scripts/phase1-down.sh
-sudo sh ~/scripts/phase1-up.sh
-exit
-EOF
+#mkdir -p ~/scripts
+#git clone git@github.com:ranmocy/chnroutes.git
+#cd chnroutes && python chnroutes.py -p mac -t ipsec && cd ..
+#touch vpnreset && chmod +x vpnreset
+#cat >> vpnreset<<EOF
+##!/bin/sh
+#sudo sh ~/scripts/phase1-down.sh
+#sudo sh ~/scripts/phase1-up.sh
+#exit
+#EOF
 
 # link dotfiles
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
