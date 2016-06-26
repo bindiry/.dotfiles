@@ -13,7 +13,6 @@ brew install vim --with-lua
 brew install macvim --with-cscope --with-lua
 brew linkapps macvim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall +qall
 
 # install aria2
 brew install aria2
@@ -29,7 +28,7 @@ sudo brew services start dnsmasq
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install the-unarchiver
-brew cask install sublime-text3
+brew cask install sublime-text
 # brew cask install dropbox
 brew cask install karabiner
 # brew cask install sequel-pro
@@ -44,7 +43,6 @@ brew cask install macdown
 brew cask install wwdc
 
 # install Prezto
-zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 setopt EXTENDED_GLOB
 for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
@@ -58,18 +56,18 @@ rm -rf User
 ln -s ~/.dotfiles/sublime_text ~/Library/"Application Support"/"Sublime Text 3"/Packages/User
 
 # install mpv
-cd ~
-brew install mpv --with-bundle
-brew linkapps mpv
-ln -s ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
-EXTS=( 3GP ASF AVI FLV M4V MKV MOV MP4 MPEG MPG MPG2 MPG4 RMVB WMV MTS )
-brew install duti
-for ext in ${EXTS[@]}
-do
-	lower=$(echo $ext | awk '{print tolower($0)}')
-	duti -s io.mpv $ext all
-	duti -s io.mpv $lower all
-done
+#cd ~
+#brew install mpv --with-bundle
+#brew linkapps mpv
+#ln -s ~/.dotfiles/mpv.conf ~/.config/mpv/mpv.conf
+#EXTS=( 3GP ASF AVI FLV M4V MKV MOV MP4 MPEG MPG MPG2 MPG4 RMVB WMV MTS )
+#brew install duti
+#for ext in ${EXTS[@]}
+#do
+	#lower=$(echo $ext | awk '{print tolower($0)}')
+	#duti -s io.mpv $ext all
+	#duti -s io.mpv $lower all
+#done
 
 # install iptable rules from https://github.com/ranmocy/chnroutes
 #mkdir -p ~/scripts
@@ -85,37 +83,7 @@ done
 
 # link dotfiles
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
+vim +PlugInstall +qall
 ln -s ~/.dotfiles/.ctags ~/.ctags
 ln -s ~/.dotfiles/.gemrc ~/.gemrc
-
-# .zshrc
-cat >> ~/.zshrc<<EOF
-alias ll='ls -al'
-alias vi='vim'
-alias grep='grep --color:auto'
-alias cls='clear'
-
-function start_lantern {
-    export http_proxy=http://127.0.0.1:8787
-    export https_proxy=$http_proxy
-    export ftp_proxy=$http_proxy
-    export rsync_proxy=$http_proxy
-    export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"
-}
-
-function stop_lantern {
-    export http_proxy=
-    export https_proxy=
-    export ftp_proxy=
-    export rsync_proxy=
-    export no_proxy=
-    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
-    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
-    sudo killall -9 networkd
-}
-
-function start_aria2 {
-  aria2c --conf-path="/Users/bindiry/.aria2/aria2.conf" -D
-}
-EOF
-
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
