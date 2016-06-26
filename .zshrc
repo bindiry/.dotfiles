@@ -4,6 +4,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 # autojump
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+# rbenv
+export RBENV_ROOT=/usr/local/var/rbenv
+eval "$(rbenv init -)"
 
 alias ll='ls -al'
 alias vi='vim'
@@ -31,4 +34,10 @@ function stop_lantern {
 
 function start_aria2 {
   aria2c --conf-path="/Users/bindiry/.aria2/aria2.conf" -D
+}
+
+function vpn {
+  cd ~/workspace/scripts/chnroutes
+  bash vpnreset.sh
+  exit
 }
