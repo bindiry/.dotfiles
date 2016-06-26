@@ -26,11 +26,11 @@ ln -s ~/.dotfiles/dnsmasq.conf /usr/local/etc/dnsmasq.conf
 sudo brew services start dnsmasq
 
 # install apps
-# brew cask install google-chrome
+brew cask install google-chrome
 brew cask install iterm2
 brew cask install the-unarchiver
 brew cask install sublime-text3
-brew cask install dropbox
+# brew cask install dropbox
 brew cask install karabiner
 # brew cask install sequel-pro
 brew cask install appcleaner
