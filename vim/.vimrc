@@ -1,16 +1,12 @@
 ":cd /Users/bindiry/workspace
-"if has("nvim")
-  "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-"endif
 source ~/.dotfiles/vim/bundles.vim
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 syntax on
-colorscheme onedark 
+colorscheme onedark
 set guifont=M+\ 2m:h13         " 设置字体和大小
 "set lines=40 columns=200       " 设置默认窗口大小
 set clipboard+=unnamed         " use system clipboard
-"xnoremap p pgvy                " 持续粘贴
 set incsearch
 set smartcase
 set nocompatible               " discard vi
@@ -62,9 +58,8 @@ map Q <Nop>
 
 " nvim
 if !has('nvim')
-    set ttymouse=xterm2
+  set ttymouse=xterm2
 endif
-
 
 " 在注释行换行时，不自动添加注释字符
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -77,7 +72,7 @@ autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 soft
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 
 if has('mouse')
-    set mouse-=a
+  set mouse-=a
 endif
 
 " 回到文件退出前光标所在的位置
@@ -108,9 +103,6 @@ au FileType python let b:delimitMate_nesting_quotes = ['"']
 au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}" b:delimitMate_nesting_quotes = ['<']
 au FileType slim,javascript let b:delimitMate_nesting_quotes = ['<']
 
-" 查找项目目录中的TODO列表
-noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
-
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public)|(\.(log|swp|ico|git|svn|png|jpg|zip|gif|ttf|svg|woff|eot|DS_Store|keep))$'
 let g:ctrlp_show_hidden = 1
@@ -127,13 +119,6 @@ nmap <leader>bl :ls<CR>
 
 " gitgutter
 let g:gitgutter_map_keys = 0
-
-" Use deoplete.
-"let g:deoplete#enable_at_startup = 1
-"let g:deoplete#enable_smart_case = 1
-"inoremap <silent><expr> <Tab>
-"\ pumvisible() ? "\<C-n>" :
-"\ deoplete#mappings#manual_complete()
 
 " neocomplete
 let g:acp_enableAtStartup = 0
@@ -203,13 +188,10 @@ let g:mta_filetypes = {
 " ctags
 au BufWritePost *.rb,*.ru silent! !ctags -R --languages=ruby &
 
-" indentline
-"let g:indentLine_color_term = 239
-"let g:indentLine_color_gui = '#555555'
+au BufWritePre * :EraseBadWhitespace
 
-" Dash
-nmap <leader>dr :silent !open dash://ruby:<cword><cr>
-nmap <leader>da :silent !open dash://rails:<cword><cr>
+" 查找项目目录中的TODO列表
+noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
