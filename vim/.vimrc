@@ -100,7 +100,7 @@ nmap ,m :NERDTreeToggle<CR>
 " delimitMate
 let delimitMate_nesting_quotes = ['"','`']
 au FileType python let b:delimitMate_nesting_quotes = ['"']
-au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}" b:delimitMate_nesting_quotes = ['<']
+au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}"
 au FileType slim,javascript let b:delimitMate_nesting_quotes = ['<']
 
 " ctrlp
