@@ -20,7 +20,7 @@ Plug 'Shougo/neocomplete.vim'
 " for neovim
 "Plug 'Shougo/deoplete.nvim'
 Plug 'Raimondi/delimitMate'
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 " color schemes
 Plug 'mhumeSF/one-dark.vim'
 " syntax highlighting

@@ -102,6 +102,7 @@ nmap ,m :NERDTreeToggle<CR>
 
 " delimitMate
 let delimitMate_nesting_quotes = ['"','`']
+"let g:delimitMate_backspace = 2
 au FileType python let b:delimitMate_nesting_quotes = ['"']
 au FileType ruby let b:delimitMate_matchpairs = "(:),[:],{:}"
 au FileType slim,javascript let b:delimitMate_nesting_quotes = ['<']
@@ -149,7 +150,7 @@ function! s:my_cr_function()
 endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " Close popup by <Space>.
 "inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
 "let g:neocomplete#enable_auto_select = 1
