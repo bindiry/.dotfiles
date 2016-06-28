@@ -2,7 +2,8 @@
 source ~/.dotfiles/vim/bundles.vim
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-syntax on
+syntax enable
+filetype plugin indent on
 colorscheme onedark
 set guifont=M+\ 2m:h13         " 设置字体和大小
 "set lines=40 columns=200       " 设置默认窗口大小
@@ -70,6 +71,8 @@ autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
+autocmd FileType slim setlocal foldmethod=indent
+autocmd BufNewFile,BufRead *.slim set filetype=slim
 
 if has('mouse')
   set mouse-=a
