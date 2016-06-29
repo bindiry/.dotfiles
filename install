@@ -50,6 +50,7 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 chsh -s /bin/zsh
+ln -s ~/.dotfiles/prezto/prompt_digeni_setup ~/.zprezto/modules/prompt/functions/prompt_digeni_setup
 
 # set sublime text
 cd ~/Library/"Application Support"/"Sublime Text 3"/Packages
