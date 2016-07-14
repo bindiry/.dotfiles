@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<root>
+  <!-- 使用 Insert / Home / PageUp 来 减小 / 增大 / 静音 音量 -->
+  <item>
+    <name>Volume Keys</name>
+    <appendix>Up, Down, Mute</appendix>
+    <identifier>remap.volumeKeys</identifier>
+    <autogen>
+      --KeyToConsumer--
+      KeyCode::PC_INSERT,
+      ConsumerKeyCode::VOLUME_DOWN
+    </autogen>
+    <autogen>
+      --KeyToConsumer--
+      KeyCode::HOME,
+      ConsumerKeyCode::VOLUME_UP
+    </autogen>
+    <autogen>
+      --KeyToConsumer-- KeyCode::PAGEUP,
+      ConsumerKeyCode::VOLUME_MUTE
+    </autogen>
+  </item>
+
+  <!-- 使用 右Application键 来切换输入法 -->
+  <item>
+    <name>Switch Input Source</name>
+    <identifier>private.remap.input_source</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::PC_APPLICATION,
+      KeyCode::SPACE, ModifierFlag::COMMAND_L
+    </autogen>
+  </item>
+
+  <!-- 使用快捷键打开应用程序  -->
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
+    <url type="file">/Applications/Google Chrome.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Macvim</name>
+    <url type="file">/Applications/MacVim.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Iterm</name>
+    <url type="file">/Applications/iTerm.app</url>
+  </vkopenurldef>
+
+  <replacementdef>
+    <replacementname>LAUNCHER_MODE_V2_EXTRA</replacementname>
+    <replacementvalue>
+      <![CDATA[
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::C,
+          KeyCode::VK_OPEN_URL_APP_Chrome,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::M,
+          KeyCode::VK_OPEN_URL_APP_Macvim,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::I,
+          KeyCode::VK_OPEN_URL_APP_Iterm,
+        </autogen>
+      ]]>
+    </replacementvalue>
+  </replacementdef>
+</root>

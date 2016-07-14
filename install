@@ -58,6 +58,11 @@ rm -rf User
 ln -s ~/.dotfiles/sublime_text ~/Library/"Application Support"/"Sublime Text 3"/Packages/User
 cd ~
 
+# set karabiner
+rm -f ~/Library/Application Support/Karabiner/private.xml
+ln -s ~/.dotfiles/karabiner/private.xml ~/Library/"Application Support"/Karabiner/private.xml
+cd ~
+
 # install mpv
 #cd ~
 #brew install mpv --with-bundle

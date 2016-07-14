@@ -18,7 +18,7 @@
 		"node_modules"
 	],
 	"font_face": "M+ 2m",
-	"font_size": 16,
+	"font_size": 14,
 	"gutter": true,
 	"hot_exit": false,
 	"ignored_packages":
