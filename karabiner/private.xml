@@ -39,13 +39,33 @@
   </vkopenurldef>
 
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Iterm</name>
+    <url type="file">/Applications/iTerm.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Macvim</name>
     <url type="file">/Applications/MacVim.app</url>
   </vkopenurldef>
 
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Iterm</name>
-    <url type="file">/Applications/iTerm.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_SublimeText</name>
+    <url type="file">/Applications/Sublime Text.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Twitter</name>
+    <url type="file">/Applications/Tweetbot.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Telegram</name>
+    <url type="file">/Applications/Telegram.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Qq</name>
+    <url type="file">/Applications/QQ.app</url>
   </vkopenurldef>
 
   <replacementdef>
@@ -54,20 +74,44 @@
       <![CDATA[
         <autogen>
           __KeyDownUpToKey__
-          KeyCode::C,
+          KeyCode::A,
           KeyCode::VK_OPEN_URL_APP_Chrome,
         </autogen>
 
         <autogen>
           __KeyDownUpToKey__
-          KeyCode::M,
+          KeyCode::S,
+          KeyCode::VK_OPEN_URL_APP_Iterm,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::D,
           KeyCode::VK_OPEN_URL_APP_Macvim,
         </autogen>
 
         <autogen>
           __KeyDownUpToKey__
-          KeyCode::I,
-          KeyCode::VK_OPEN_URL_APP_Iterm,
+          KeyCode::F,
+          KeyCode::VK_OPEN_URL_APP_SublimeText,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::Q,
+          KeyCode::VK_OPEN_URL_APP_Twitter,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::W,
+          KeyCode::VK_OPEN_URL_APP_Telegram,
+        </autogen>
+
+        <autogen>
+          __KeyDownUpToKey__
+          KeyCode::E,
+          KeyCode::VK_OPEN_URL_APP_Qq,
         </autogen>
       ]]>
     </replacementvalue>
