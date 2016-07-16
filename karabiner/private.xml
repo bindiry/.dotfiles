@@ -127,4 +127,21 @@
       ]]>
     </replacementvalue>
   </replacementdef>
+
+  <!-- 使用 Ctrl + h/l 来切换屏幕 -->
+  <item>
+    <name>Swap Ctrl + left/right and Ctrl + h/l</name>
+    <identifier>private.swap_ctrl_lr_and_ctrl_hl</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H,   ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::L,   ModifierFlag::CONTROL_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
+    </autogen>
+  </item>
+
 </root>
