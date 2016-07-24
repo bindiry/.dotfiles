@@ -40,7 +40,7 @@ set hlsearch                   " 高亮搜索结果
 "set splitright                " 所有文件都从右侧纵向分割打开
 set nobackup                   " 设置不生成备份文件
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 "set colorcolumn=120
 "hi ColorColumn ctermbg=238
 " 设置高亮列背景色，并设置快捷键开启和关闭
