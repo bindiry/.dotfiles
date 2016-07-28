@@ -5,7 +5,7 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 colorscheme onedark
-set guifont=M+\ 2m:h12         " 设置字体和大小
+set guifont=M+\ 2m:h16         " 设置字体和大小
 "set lines=40 columns=200      " 设置默认窗口大小
 set guioptions-=r              " 隐藏滚动条
 set clipboard+=unnamed         " use system clipboard
@@ -122,6 +122,7 @@ nmap <leader>l :bn<CR>
 nmap <leader>h :bp<CR>
 nmap <leader>bq :bp <BAR> bd #<CR>
 nmap <leader>bl :ls<CR>
+nmap <leader>j :e#<CR>
 
 " gitgutter
 let g:gitgutter_map_keys = 0
