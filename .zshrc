@@ -41,3 +41,10 @@ function vpn {
   bash vpnreset.sh
   exit
 }
+
+function restart_network {
+    sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+    sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
+    sudo killall -9 networkd
+}
+function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
