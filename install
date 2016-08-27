@@ -22,7 +22,7 @@ ln -s ~/.dotfiles/.aria2/aria2.conf ~/.aria2/aria2.conf
 
 # install dnsmasq
 brew instal dnsmasq
-ln -s ~/.dotfiles/dnsmasq.conf /usr/local/etc/dnsmasq.conf
+ln -s ~/.dotfiles/dnsmasq/dnsmasq.conf /usr/local/etc/dnsmasq.conf
 sudo brew services start dnsmasq
 
 # install apps
