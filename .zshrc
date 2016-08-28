@@ -10,7 +10,6 @@ eval "$(rbenv init -)"
 
 alias ll='ls -al'
 alias vi='vim'
-alias grep='grep --color:auto'
 alias cls='clear'
 
 function start_lantern {
