@@ -21,7 +21,7 @@
     </autogen>
   </item>
 
-  <!-- 使用 右Application键 来切换输入法 -->
+  <!-- 使用 右Application键 来切换输入法 for Windows -->
   <item>
     <name>Switch Input Source</name>
     <identifier>private.remap.input_source</identifier>
@@ -29,6 +29,17 @@
       __KeyToKey__
       KeyCode::PC_APPLICATION,
       KeyCode::SPACE, ModifierFlag::COMMAND_L
+    </autogen>
+  </item>
+
+  <!-- 使用 CMD+ESC 来反向切换已打开的程序  -->
+  <item>
+    <name>Clone Command + Shift + Tab to Command + Esc</name>
+    <identifier>private.remap.cmd_esc_to_cmd_shift_tab</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::ESCAPE, ModifierFlag::COMMAND_L,
+      KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
     </autogen>
   </item>
 

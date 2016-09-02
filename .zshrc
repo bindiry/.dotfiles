@@ -37,7 +37,7 @@ function start_aria2 {
 
 function vpn {
   cd ~/workspace/scripts/chnroutes
-  bash vpnreset.sh
+  bash vpnreset1.sh
   exit
 }
 
@@ -45,5 +45,7 @@ function restart_network {
     sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
     sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist
     sudo killall -9 networkd
+    sudo brew services restart dnsmasq
 }
+
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
