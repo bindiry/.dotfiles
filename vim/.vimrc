@@ -39,7 +39,7 @@ set hlsearch                   " 高亮搜索结果
 "set iskeyword+=-              " 匹配使用-连接的关键词
 "set splitright                " 所有文件都从右侧纵向分割打开
 set nobackup                   " 设置不生成备份文件
-set cursorline
+"set cursorline
 "set cursorcolumn
 "set colorcolumn=120
 "hi ColorColumn ctermbg=238
@@ -202,3 +202,37 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
+
+" Toggle current line highlighting while in Insert mode {{{2
+" Idea taken from Tobias Schlitt <toby@php.net> ~/.vimrc
+" http://coderepos.org/share/browser/dotfiles/vim/kiske-vimrc?rev=33319#L65
+if has ("syntax")
+  let g:myCursorLine=0
+  function! MyCursorLine()
+    let g:myCursorLine = g:myCursorLine + 1
+    if g:myCursorLine >= 3 | let g:myCursorLine = 0 | endif
+    if g:myCursorLine == 1
+      augroup myCursorLine
+        autocmd!
+        autocmd InsertEnter * set cursorline
+        autocmd InsertLeave * set nocursorline
+      augroup end
+      echo "Cursor line on"
+    elseif g:myCursorLine == 2
+      augroup myCursorLine
+        autocmd!
+      augroup end
+      set cursorline
+      echo "Cursor line always"
+    else
+      augroup myCursorLine
+        autocmd!
+      augroup end
+      set nocursorline
+      echo "Cursor line off"
+    endif
+  endf
+
+  nmap <F1> :call MyCursorLine()<CR>
+  imap <F1> <C-o>:call MyCursorLine()<CR>
+endif
