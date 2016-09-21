@@ -37,7 +37,7 @@ function start_aria2 {
 
 function vpn {
   cd ~/workspace/scripts/chnroutes
-  bash vpnreset1.sh
+  bash vpnreset.sh
   exit
 }
 

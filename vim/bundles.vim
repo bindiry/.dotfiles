@@ -30,6 +30,7 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'nono/jquery.vim'
 Plug 'tpope/vim-markdown'
 Plug 'slim-template/vim-slim'
+Plug 'posva/vim-vue'
 " front-end
 "Plug 'mattn/emmet-vim'
 " ruby

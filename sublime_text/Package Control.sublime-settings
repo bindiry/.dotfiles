@@ -9,6 +9,7 @@
 		"EJS",
 		"GitGutter",
 		"HTML-CSS-JS Prettify",
+		"Jade",
 		"Markdown Extended",
 		"One Dark Color Scheme",
 		"Package Control",
@@ -17,6 +18,8 @@
 		"SCSS",
 		"SideBarEnhancements",
 		"Sublime Tutor",
-		"Theme - Spacegray"
+		"Theme - Spacegray",
+		"Vue Syntax Highlight",
+		"Vuejs Snippets"
 	]
 }
