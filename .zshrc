@@ -1,11 +1,16 @@
+ZSH_CUSTOM=~/.zsh
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
 # autojump
 #[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 # z
 . `brew --prefix`/etc/profile.d/z.sh
+
 # rbenv
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
@@ -51,3 +56,15 @@ function restart_network {
 }
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
+
+proxy () {
+  export http_proxy="http://127.0.0.1:8888"
+  export https_proxy="http://127.0.0.1:8888"
+  echo "HTTP Proxy on"
+}
+
+noproxy () {
+  unset http_proxy
+  unset https_proxy
+  echo "HTTP Proxy off"
+}

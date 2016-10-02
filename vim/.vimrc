@@ -75,6 +75,7 @@ autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 soft
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType slim setlocal foldmethod=indent
 autocmd BufNewFile,BufRead *.slim set filetype=slim
+autocmd BufNewFile,BufRead *.md set wrap linebreak textwidth=0
 
 if has('mouse')
   set mouse-=a
@@ -180,7 +181,9 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " emmet
-"let g:user_emmet_expandabbr_key = '<C-e>'
+let g:user_emmet_expandabbr_key = '<C-e>'
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,vue EmmetInstall
 
 " MatchTagAlways
 let g:mta_use_matchparen_group = 1
