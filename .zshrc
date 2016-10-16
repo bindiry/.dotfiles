@@ -1,6 +1,3 @@
-ZSH_CUSTOM=~/.zsh
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
