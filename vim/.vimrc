@@ -5,7 +5,7 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 colorscheme onedark
-set guifont=M+\ 2m:h14         " 设置字体和大小
+set guifont=M+\ 1m:h16         " 设置字体和大小
 "set lines=40 columns=200      " 设置默认窗口大小
 set guioptions-=r              " 隐藏滚动条
 set clipboard+=unnamed         " use system clipboard
@@ -58,6 +58,8 @@ map Q <Nop>
 "noremap p "0p
 "noremap P "0P
 set fillchars+=vert:\          " 隐藏分割线
+" Map ESC
+"imap jj <ESC>
 
 " nvim
 if !has('nvim')
@@ -239,3 +241,11 @@ if has ("syntax")
   nmap <F1> :call MyCursorLine()<CR>
   imap <F1> <C-o>:call MyCursorLine()<CR>
 endif
+
+" Skip to Model, View or Controller
+map <Leader>rm :Rmodel
+map <Leader>rv :Rview
+map <Leader>rc :Rcontroller
+" View routes or Gemfile in large split
+map <leader>rr :topleft :split config/routes.rb<cr>
+map <leader>rg :topleft 100 :split Gemfile<cr>

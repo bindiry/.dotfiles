@@ -12,6 +12,10 @@ fi
 export RBENV_ROOT=/usr/local/var/rbenv
 eval "$(rbenv init -)"
 
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 alias ll='ls -al'
 alias vi='vim'
 alias cls='clear'
@@ -41,7 +45,8 @@ function start_aria2 {
 
 function vpn {
   cd ~/workspace/scripts/chnroutes
-  bash vpnreset.sh
+  #bash vpnreset.sh
+  bash phasevpn.sh
   exit
 }
 
