@@ -26,7 +26,7 @@ Plug 'mhumeSF/one-dark.vim'
 " syntax highlighting
 "Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
-"Plug 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'
 "Plug 'nono/jquery.vim'
 Plug 'tpope/vim-markdown'
 Plug 'slim-template/vim-slim'
