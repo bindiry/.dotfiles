@@ -84,6 +84,10 @@ cd ~
 #exit
 #EOF
 
+# install rbenv
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
 # link dotfiles
 ln -s ~/.dotfiles/.spacemacs ~/.spacemacs
 ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
