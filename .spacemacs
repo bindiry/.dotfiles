@@ -31,28 +31,30 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     javascript
      yaml
-     osx
      html
+     ;; yaml
+     osx
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; helm
-     ivy
+     helm
+     ;; ivy
      auto-completion
      better-defaults
-     emacs-lisp
-     git
+     ;; emacs-lisp
+     ;; git
      markdown
      ;; org
      ;; (shell :variables
-            ;; shell-default-height 30
-            ;; shell-default-position 'bottom)
+     ;; shell-default-height 30
+     ;; shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; version-control
+     version-control
      ruby-on-rails
      )
    ;; List of additional packages that will be installed without being
@@ -63,7 +65,14 @@ values."
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
-   dotspacemacs-excluded-packages '(vi-tilde-fringe)
+   dotspacemacs-excluded-packages '(
+                                    vi-tilde-fringe
+                                    google-translate
+                                    osx-dictionary
+                                    dashboard
+                                    tern
+                                    company-tern
+                                    )
    ;; Defines the behaviour of Spacemacs when installing packages.
    ;; Possible values are `used-only', `used-but-keep-unused' and `all'.
    ;; `used-only' installs only explicitly used packages and uninstall any
@@ -122,9 +131,9 @@ values."
    ;; `recents' `bookmarks' `projects' `agenda' `todos'."
    ;; List sizes may be nil, in which case
    ;; `spacemacs-buffer-startup-lists-length' takes effect.
-   dotspacemacs-startup-lists nil
-   ;; dotspacemacs-startup-lists '((recents . 5)
-   ;;                              (projects . 7))
+   ;; dotspacemacs-startup-lists nil
+   dotspacemacs-startup-lists '((recents . 5)
+                                (projects . 7))
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
@@ -299,6 +308,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq tramp-ssh-controlmaster-options
         "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
   (setq exec-path-from-shell-check-startup-files nil)
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -308,19 +318,11 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  ;; (setq inhibit-splash-screen t)
-  ;; (setq inhibit-startup-screen t)
-  ;; (setq inhibit-startup-message t)
-  ;; (setq inhibit-scratch-message nil)
-  " show line number"
-  ;; (global-linum-mode t)
-  "show 80 chars column"
-  (turn-on-fci-mode)
   ;; do not generate backup
   (setq make-backup-files nil)
   ;; default window size
-  (add-to-list 'default-frame-alist '(width . 140))
-  (add-to-list 'default-frame-alist '(height . 30))
+  (add-to-list 'default-frame-alist '(width . 180))
+  (add-to-list 'default-frame-alist '(height . 50))
   ;; status bar
   (setq ns-use-srgb-colorspace nil)
   (setq powerline-default-separator 'arrow)
@@ -335,7 +337,31 @@ you should place your code here."
   ;; select text
   (with-eval-after-load 'evil
     (defalias #'forward-evil-word #'forward-evil-symbol))
+  ;; always follow symlink
+  (setq vc-follow-symlinks nil)
+  ;; markdown cfm-mode
+  (add-to-list 'auto-mode-alist '("\\.md\\'" . gfm-mode))
+  ;; tab
+  (setq-default indent-tabs-mode nil)
+  (setq-default default-tab-width 2)
+  (setq-default tab-always-indent nil)
+  ;; disable company-mode
+  ;; (add-hook 'gfm-mode-hook (lambda () (setq company-mode nil)))
+  ;; disable auto-complete
+  (auto-completion :variables auto-completion-enable-sort-by-usage t
+                   auto-completion-enable-snippets-in-popup t
+                   :disabled-for org markdown)
+  ;; disable smartparens auto pairs
+  (sp-pair "`" "")
+  ;; (setq-default sp-pair "`" nil :actions nil)
+  (sp-local-pair 'markdown-mode "`" :actions nil)
+  ;; (sp-local-pair 'markdown-mode "`" nil :actions '(insert))
+  ;; (sp-with-modes '(markdown-mode gfm-mode)
+  ;;   (sp-local-pair "`" nil :actions nil)
+  ;;   )
+
   )
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -346,7 +372,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (dashboard page-break-lines wgrep smex ivy-hydra counsel-projectile counsel swiper ivy yaml-mode reveal-in-osx-finder pbcopy osx-trash osx-dictionary launchctl mwim web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv projectile-rails rake inflections minitest feature-mode chruby bundler inf-ruby xterm-color smeargle shell-pop orgit org multi-term mmm-mode markdown-toc markdown-mode magit-gitflow helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-tCompany-modeCompany-modeCompany-modeCompany-modeCompany-modeCompany-modeheme))))
+    (web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor multiple-cursors js2-mode js-doc company-tern dash-functional tern coffee-mode page-break-lines wgrep smex ivy-hydra counsel-projectile counsel swiper ivy yaml-mode reveal-in-osx-finder pbcopy launchctl mwim web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv projectile-rails rake inflections minitest feature-mode chruby bundler inf-ruby xterm-color smeargle shell-pop orgit org multi-term mmm-mode markdown-toc markdown-mode magit-gitflow helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md evil-magit magit magit-popup git-commit with-editor eshell-z eshell-prompt-extras esh-help diff-hl company-statistics company auto-yasnippet yasnippet ac-ispell auto-complete ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed dash aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async quelpa package-build spacemacs-tCompany-modeCompany-modeCompany-modeCompany-modeCompany-modeCompany-modeheme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
