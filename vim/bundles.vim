@@ -22,7 +22,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Raimondi/delimitMate'
 "Plug 'tpope/vim-surround'
 " color schemes
-Plug 'mhumeSF/one-dark.vim'
+Plug 'geoffharcourt/one-dark.vim'
 " syntax highlighting
 "Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'

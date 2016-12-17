@@ -9,7 +9,7 @@ fi
 . `brew --prefix`/etc/profile.d/z.sh
 
 # rbenv
-export RBENV_ROOT=/usr/local/var/rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # nvm
@@ -40,7 +40,7 @@ function stop_lantern {
 }
 
 function start_aria2 {
-  aria2c --conf-path="/Users/bindiry/.aria2/aria2.conf" -D
+  aria2c --conf-path="/Users/lin/.aria2/aria2.conf" -D
 }
 
 function vpn {

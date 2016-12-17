@@ -5,10 +5,14 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 colorscheme onedark
-set guifont=M+\ 1m:h14         " 设置字体和大小
+set guifont=M+\ 1m\ medium:h14         " 设置字体和大小
 set linespace=1
 "set lines=40 columns=200      " 设置默认窗口大小
-set guioptions-=r              " 隐藏滚动条
+if has("gui_running")
+  set guioptions-=L            " 隐藏左侧滚动条
+  set guioptions-=r            " 隐藏右侧滚动条
+  set guioptions-=T            " 去掉上方工具栏
+endif
 set clipboard+=unnamed         " use system clipboard
 set incsearch
 set smartcase
@@ -20,7 +24,7 @@ set confirm
 set backspace=indent,eol,start " More powerful backspacing
 set t_Co=256                   " Explicitly tell vim that the terminal has 256 colors
 set nowrap                     " dont wrap lines
-set scrolloff=3                " 3 lines above/below cursor when scrolling
+set scrolloff=5                " 3 lines above/below cursor when scrolling
 set showmatch                  " show matching bracket (briefly jump)
 set matchtime=2
 set showcmd                    " show typed command in status bar
