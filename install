@@ -37,7 +37,7 @@ brew cask install iterm2
 brew cask install the-unarchiver
 brew cask install sublime-text
 # brew cask install dropbox
-brew cask install karabiner
+# brew cask install karabiner
 # brew cask install sequel-pro
 brew cask install appcleaner
 # brew cask install coteditor
@@ -68,9 +68,9 @@ cd ~
 # go https://packagecontrol.io/installation and Ctrl + ` to paste then install
 
 # set karabiner
-rm -f ~/Library/Application Support/Karabiner/private.xml
-ln -s ~/.dotfiles/karabiner/private.xml ~/Library/"Application Support"/Karabiner/private.xml
-cd ~
+#rm -f ~/Library/Application Support/Karabiner/private.xml
+#ln -s ~/.dotfiles/karabiner/private.xml ~/Library/"Application Support"/Karabiner/private.xml
+#cd ~
 
 # install iptable rules from https://github.com/ranmocy/chnroutes
 #mkdir -p ~/scripts
