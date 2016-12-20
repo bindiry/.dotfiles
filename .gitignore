@@ -3,3 +3,4 @@ tags
 .ctags
 *.swp
 *.swo
+.DS_Store
