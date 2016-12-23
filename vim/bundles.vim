@@ -3,6 +3,9 @@ call plug#begin('~/.vim/plugged')
 
 " files manager
 Plug 'scrooloose/nerdtree'
+" status bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 " search
 Plug 'rking/ag.vim'
@@ -11,8 +14,6 @@ Plug 'scrooloose/nerdcommenter'
 " git status
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-" status bar
-Plug 'vim-airline'
 " code completion
 Plug 'Shougo/neocomplete.vim'
 "Plug 'vim-scripts/AutoComplPop'

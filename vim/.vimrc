@@ -5,13 +5,14 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 colorscheme onedark
-set guifont=M+\ 1m\ medium:h14         " 设置字体和大小
-set linespace=1
+set guifont=M+\ 1m:h14         " 设置字体和大小
+set linespace=1.2
 "set lines=40 columns=200      " 设置默认窗口大小
 if has("gui_running")
   set guioptions-=L            " 隐藏左侧滚动条
   set guioptions-=r            " 隐藏右侧滚动条
   set guioptions-=T            " 去掉上方工具栏
+  set guioptions+=c
 endif
 set clipboard+=unnamed         " use system clipboard
 set incsearch
@@ -109,6 +110,13 @@ nmap ,n :NERDTreeFind<CR>
 nmap ,m :NERDTreeToggle<CR>
 " 如果打开的文件只剩nerdtree，则直接退出，避免多次:q
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
+
+" airline
+let g:airline_theme='simple'
+"let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 2 " tab number"
+let g:airline#extensions#tabline#show_tab_nr = 1
 
 " delimitMate
 let delimitMate_nesting_quotes = ['"','`']
