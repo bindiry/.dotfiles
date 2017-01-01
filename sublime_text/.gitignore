@@ -4,3 +4,4 @@
 *.system-ca-bundle
 *.user-ca-bundle
 *.sublime-macro
+*.crt
