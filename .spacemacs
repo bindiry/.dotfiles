@@ -348,17 +348,13 @@ you should place your code here."
   ;; disable company-mode
   ;; (add-hook 'gfm-mode-hook (lambda () (setq company-mode nil)))
   ;; disable auto-complete
-  (auto-completion :variables auto-completion-enable-sort-by-usage t
-                   auto-completion-enable-snippets-in-popup t
-                   :disabled-for org markdown)
-  ;; disable smartparens auto pairs
-  (sp-pair "`" "")
-  ;; (setq-default sp-pair "`" nil :actions nil)
-  (sp-local-pair 'markdown-mode "`" :actions nil)
-  ;; (sp-local-pair 'markdown-mode "`" nil :actions '(insert))
-  ;; (sp-with-modes '(markdown-mode gfm-mode)
-  ;;   (sp-local-pair "`" nil :actions nil)
-  ;;   )
+  ;; (auto-completion :variables auto-completion-enable-sort-by-usage t
+  ;;                  auto-completion-enable-snippets-in-popup t
+  ;;                  :disabled-for org markdown)
+  ;; Don't do terrible things with Github code blocks (```)
+  ;; (when (fboundp 'sp-pair)
+  ;;   (sp-pair '(markdown-mode gfm-mode) "`" nil :actions :rem))
+  (sp-pair "`" nil :actions :rem)
 
   )
 
