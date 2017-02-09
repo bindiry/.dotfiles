@@ -21,7 +21,7 @@ Plug 'Shougo/neocomplete.vim'
 " for neovim
 "Plug 'Shougo/deoplete.nvim'
 Plug 'Raimondi/delimitMate'
-"Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " color schemes
 Plug 'geoffharcourt/one-dark.vim'
 " syntax highlighting
@@ -31,18 +31,27 @@ Plug 'kchmck/vim-coffee-script'
 "Plug 'nono/jquery.vim'
 Plug 'tpope/vim-markdown'
 Plug 'slim-template/vim-slim'
-Plug 'posva/vim-vue'
+"Plug 'posva/vim-vue'
 " front-end
 Plug 'mattn/emmet-vim'
+
 " ruby
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'KurtPreston/vim-autoformat-rails'
+Plug 'ngmy/vim-rubocop'
+
+" python
+Plug 'google/yapf'
+Plug 'timothycrosley/isort'
+
 " auto handle blank code
 Plug 'bitc/vim-bad-whitespace'
 " auto switch input method
 "Plug 'ybian/smartim'
+" python
+Plug 'vim-scripts/indentpython.vim'
 " indent
 "Plug 'nathanaelkane/vim-indent-guides'
 

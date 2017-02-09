@@ -7,7 +7,8 @@
 	[
 		"*.swp",
 		".DS_Store",
-		"tags"
+		"tags",
+		".pyc"
 	],
 	"folder_exclude_patterns":
 	[

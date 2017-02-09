@@ -6,7 +6,6 @@ set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 colorscheme onedark
 set guifont=M+\ 1m:h14         " 设置字体和大小
-set linespace=1.2
 "set lines=40 columns=200      " 设置默认窗口大小
 if has("gui_running")
   set guioptions-=L            " 隐藏左侧滚动条
@@ -40,6 +39,7 @@ set softtabstop=2              " backspace
 set shiftwidth=2               " indent width
 set expandtab                  " expand tab to space
 let mapleader=','
+let maplocalleader = "\\"
 set hidden                     " 解决文档未保存时不能使用TAB切换的问题
 set hlsearch                   " 高亮搜索结果
 "set iskeyword+=-              " 匹配使用-连接的关键词
@@ -197,7 +197,7 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " emmet
 let g:user_emmet_expandabbr_key = '<C-e>'
-let g:user_emmet_install_global = 0
+let g:user_emmet_install_global = 1
 autocmd FileType html,css,vue EmmetInstall
 
 " MatchTagAlways
@@ -254,6 +254,15 @@ if has ("syntax")
   nmap <F1> :call MyCursorLine()<CR>
   imap <F1> <C-o>:call MyCursorLine()<CR>
 endif
+
+" python
+" Code Formatter
+" <LocalLeader> =
+autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
+" Sort Import
+" <LocalLeader>i
+autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
+
 
 " Skip to Model, View or Controller
 map <Leader>rm :Rmodel

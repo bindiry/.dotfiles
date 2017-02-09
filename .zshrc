@@ -14,6 +14,10 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# pyenv
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
@@ -42,7 +46,7 @@ function stop_lantern {
 }
 
 function start_aria2 {
-  aria2c --conf-path="/Users/lin/.aria2/aria2.conf" -D
+  aria2c --conf-path="/Users/jonas/.aria2/aria2.conf" -D
 }
 
 function vpn {
