@@ -65,14 +65,9 @@ function restart_network {
 
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
-proxy () {
-  export http_proxy="http://127.0.0.1:8888"
-  export https_proxy="http://127.0.0.1:8888"
-  echo "HTTP Proxy on"
-}
-
-noproxy () {
-  unset http_proxy
-  unset https_proxy
-  echo "HTTP Proxy off"
-}
+# proxy
+alias setproxy="export http_proxy=socks5://127.0.0.1:1080; export https_proxy=$http_proxy; echo 'HTTP Proxy on';"
+alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
+# Git proxy
+alias gitproxy="git config —global —replace-all https.proxy 'socks5://127.0.0.1:1080'; git config —global —replace-all http.proxy 'socks5://127.0.0.1:1080'; echo 'GIT proxy on'"
+alias unsetgitproxy="git config —global —replace-all http.proxy ''; git config —global —replace-all https.proxy ''; echo 'GIT proxy off'"

@@ -271,3 +271,8 @@ map <Leader>rc :Rcontroller
 " View routes or Gemfile in large split
 map <leader>rr :topleft :split config/routes.rb<cr>
 map <leader>rg :topleft 100 :split Gemfile<cr>
+
+" ruby
+let g:vimrubocop_keymap = 0
+nmap <Leader>r :RuboCop<CR>
+let g:syntastic_ruby_rubocop_exec = '/Users/jonas/.rbenv/shims/ruby'
