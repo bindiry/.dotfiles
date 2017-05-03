@@ -4,8 +4,8 @@ call plug#begin('~/.vim/plugged')
 " files manager
 Plug 'scrooloose/nerdtree'
 " status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
 " search
 Plug 'rking/ag.vim'
@@ -27,10 +27,10 @@ Plug 'geoffharcourt/one-dark.vim'
 " syntax highlighting
 "Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
-Plug 'kchmck/vim-coffee-script'
+"Plug 'kchmck/vim-coffee-script'
 "Plug 'nono/jquery.vim'
 Plug 'tpope/vim-markdown'
-Plug 'slim-template/vim-slim'
+"Plug 'slim-template/vim-slim'
 "Plug 'posva/vim-vue'
 " front-end
 Plug 'mattn/emmet-vim'
@@ -39,20 +39,10 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
-Plug 'KurtPreston/vim-autoformat-rails'
-Plug 'ngmy/vim-rubocop'
-
-" python
-Plug 'google/yapf'
-Plug 'timothycrosley/isort'
+"Plug 'KurtPreston/vim-autoformat-rails'
+"Plug 'ngmy/vim-rubocop'
 
 " auto handle blank code
 Plug 'bitc/vim-bad-whitespace'
-" auto switch input method
-"Plug 'ybian/smartim'
-" python
-Plug 'vim-scripts/indentpython.vim'
-" indent
-"Plug 'nathanaelkane/vim-indent-guides'
 
 call plug#end()

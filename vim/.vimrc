@@ -67,11 +67,6 @@ set fillchars+=vert:\          " 隐藏分割线
 " Map ESC
 "imap jj <ESC>
 
-" nvim
-if !has('nvim')
-  set ttymouse=xterm2
-endif
-
 " 在注释行换行时，不自动添加注释字符
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
@@ -100,7 +95,7 @@ endif
 " 打开vim时自动将光标定位在编辑窗口
 " autocmd VimEnter * wincmd p
 " let NERDChristmasTree=0
-let NERDTreeWinSize=30
+let NERDTreeWinSize=45
 let NERDTreeChDirMode=2
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
 " let NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$',  '\~$']
@@ -112,11 +107,10 @@ nmap ,m :NERDTreeToggle<CR>
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 
 " airline
-let g:airline_theme='simple'
-"let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tab_nr_type = 2 " tab number"
-let g:airline#extensions#tabline#show_tab_nr = 1
+"let g:airline_theme='simple'
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#tab_nr_type = 2
+"let g:airline#extensions#tabline#show_tab_nr = 1
 
 " delimitMate
 let delimitMate_nesting_quotes = ['"','`']
@@ -221,49 +215,6 @@ noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
 
-" Toggle current line highlighting while in Insert mode {{{2
-" Idea taken from Tobias Schlitt <toby@php.net> ~/.vimrc
-" http://coderepos.org/share/browser/dotfiles/vim/kiske-vimrc?rev=33319#L65
-if has ("syntax")
-  let g:myCursorLine=0
-  function! MyCursorLine()
-    let g:myCursorLine = g:myCursorLine + 1
-    if g:myCursorLine >= 3 | let g:myCursorLine = 0 | endif
-    if g:myCursorLine == 1
-      augroup myCursorLine
-        autocmd!
-        autocmd InsertEnter * set cursorline
-        autocmd InsertLeave * set nocursorline
-      augroup end
-      echo "Cursor line on"
-    elseif g:myCursorLine == 2
-      augroup myCursorLine
-        autocmd!
-      augroup end
-      set cursorline
-      echo "Cursor line always"
-    else
-      augroup myCursorLine
-        autocmd!
-      augroup end
-      set nocursorline
-      echo "Cursor line off"
-    endif
-  endf
-
-  nmap <F1> :call MyCursorLine()<CR>
-  imap <F1> <C-o>:call MyCursorLine()<CR>
-endif
-
-" python
-" Code Formatter
-" <LocalLeader> =
-autocmd FileType python nnoremap <LocalLeader>= :0,$!yapf<CR>
-" Sort Import
-" <LocalLeader>i
-autocmd FileType python nnoremap <LocalLeader>i :!isort %<CR><CR>
-
-
 " Skip to Model, View or Controller
 map <Leader>rm :Rmodel
 map <Leader>rv :Rview
@@ -273,6 +224,6 @@ map <leader>rr :topleft :split config/routes.rb<cr>
 map <leader>rg :topleft 100 :split Gemfile<cr>
 
 " ruby
-let g:vimrubocop_keymap = 0
-nmap <Leader>r :RuboCop<CR>
-let g:syntastic_ruby_rubocop_exec = '/Users/jonas/.rbenv/shims/ruby'
+"let g:vimrubocop_keymap = 0
+"nmap <Leader>r :RuboCop<CR>
+"let g:syntastic_ruby_rubocop_exec = '/Users/jonas/.rbenv/shims/ruby'

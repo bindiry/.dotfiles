@@ -18,7 +18,7 @@
 		"tmp",
 		"node_modules"
 	],
-	"font_face": "M+ 1m",
+	"font_face": "M+ 2m",
 	"font_size": 14,
 	"gutter": true,
 	"hot_exit": false,
@@ -27,7 +27,8 @@
 		"Vintage"
 	],
 	"line_numbers": true,
-	"line_padding_bottom": 0.6,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
 	"remember_open_files": false,
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
