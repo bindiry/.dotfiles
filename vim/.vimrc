@@ -63,6 +63,7 @@ map Q <Nop>
 " 默认粘贴不替换寄存器里的内容
 "noremap p "0p
 "noremap P "0P
+xnoremap p "_dP
 set fillchars+=vert:\          " 隐藏分割线
 " Map ESC
 "imap jj <ESC>

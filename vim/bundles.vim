@@ -42,6 +42,13 @@ Plug 'tpope/vim-rails'
 "Plug 'KurtPreston/vim-autoformat-rails'
 "Plug 'ngmy/vim-rubocop'
 
+" Elixir
+"Plug 'elixir-lang/vim-elixir'
+"Plug 'tpope/vim-projectionist'
+"Plug 'avdgaag/vim-phoenix'
+"Plug 'lucidstack/hex.vim'
+"Plug 'slashmili/alchemist.vim'
+
 " auto handle blank code
 Plug 'bitc/vim-bad-whitespace'
 
