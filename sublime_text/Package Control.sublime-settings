@@ -5,12 +5,15 @@
 	],
 	"installed_packages":
 	[
+		"Base16 Color Schemes",
+		"Base16 Eighties Dark Color Scheme",
 		"Dracula Color Scheme",
 		"EJS",
 		"GitGutter",
 		"HTML-CSS-JS Prettify",
 		"Jade",
 		"Markdown Extended",
+		"Nova Theme",
 		"One Dark Color Scheme",
 		"One Dark Material - Theme",
 		"Package Control",

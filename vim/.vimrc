@@ -5,7 +5,7 @@ filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 colorscheme onedark
-set guifont=M+\ 1m:h14         " 设置字体和大小
+set guifont=M+\ 1m:h18         " 设置字体和大小
 "set lines=40 columns=200      " 设置默认窗口大小
 if has("gui_running")
   set guioptions-=L            " 隐藏左侧滚动条
@@ -42,6 +42,7 @@ let mapleader=','
 let maplocalleader = "\\"
 set hidden                     " 解决文档未保存时不能使用TAB切换的问题
 set hlsearch                   " 高亮搜索结果
+set modifiable                 " 可以在quickfix list中使用o键打开
 "set iskeyword+=-              " 匹配使用-连接的关键词
 "set splitright                " 所有文件都从右侧纵向分割打开
 set nobackup                   " 设置不生成备份文件
@@ -61,9 +62,7 @@ set scrolloff=7
 " 禁用Ex mode
 map Q <Nop>
 " 默认粘贴不替换寄存器里的内容
-"noremap p "0p
-"noremap P "0P
-xnoremap p "_dP
+"xnoremap p "0p
 set fillchars+=vert:\          " 隐藏分割线
 " Map ESC
 "imap jj <ESC>
@@ -211,7 +210,7 @@ au BufWritePost *.rb,*.ru silent! !ctags -R --languages=ruby &
 au BufWritePre * :EraseBadWhitespace
 
 " 查找项目目录中的TODO列表
-noremap <Leader>trb :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
+noremap <Leader>td :noautocmd vimgrep /TODO/j **/*.rb<CR>:cw<CR>
 
 " puts the caller
 nnoremap <leader>wtf oputs "#" * 90<c-m>puts caller<c-m>puts "#" * 90<esc>
