@@ -126,6 +126,10 @@ nmap <leader>p :CtrlP<CR>
 nmap <leader>bb :CtrlPBuffer<CR>
 nmap <leader>bm :CtrlPMixed<CR>
 nmap <leader>bs :CtrlPMRU<CR>
+let g:ctrlp_prompt_mappings = {
+      \ 'PrtClearCache()':      ['<c-g>'],
+      \ 'PrtExit()':            ['<esc>', '<c-c>'],
+      \ }
 
 " 切换buffers
 nmap <leader>l :bn<CR>

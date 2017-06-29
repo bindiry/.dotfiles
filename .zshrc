@@ -23,10 +23,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
 
 # golang
-export GOPATH=$HOME/golang
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+GO_WORK_PATH=${HOME}/workspace/golang/code
+GO_LIB_PATH=${HOME}/workspace/golang/golib
+export GOROOT=/usr/local/Cellar/go/1.8.3/libexec
+export GOPATH=${GO_LIB_PATH}:${GO_WORK_PATH}
+export PATH="${PATH}:${GOBIN}"
+
 
 alias ll='ls -al'
 alias vi='vim'

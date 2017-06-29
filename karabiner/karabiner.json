@@ -55,7 +55,7 @@
                         "product_id": 632,
                         "vendor_id": 1452
                     },
-                    "ignore": true,
+                    "ignore": false,
                     "keyboard_type": 0
                 },
                 {
@@ -97,14 +97,7 @@
             "name": "Default profile",
             "selected": true,
             "simple_modifications": {
-                "caps_lock": "left_control",
-                "home": "mute",
-                "left_command": "left_option",
-                "left_option": "left_command",
-                "page_down": "volume_down",
-                "page_up": "volume_up",
-                "right_command": "right_option",
-                "right_option": "right_command"
+                "caps_lock": "left_control"
             },
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
