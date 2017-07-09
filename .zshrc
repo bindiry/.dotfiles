@@ -61,9 +61,9 @@ alias gitproxy="git config —global —replace-all https.proxy 'socks5://127.0.
 alias unsetgitproxy="git config —global —replace-all http.proxy ''; git config —global —replace-all https.proxy ''; echo 'GIT proxy off'"
 
 # add qingge word
-function pgwb() {
+function qgwb() {
   echo "\n$1 $2" >> ~/Dropbox/config/qingge/wb_table.txt
 }
-function pgpy() {
+function qgpy() {
   echo "\n$1 $2" >> ~/Dropbox/config/qingge/py_table.txt
 }
