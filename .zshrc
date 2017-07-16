@@ -14,21 +14,16 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-# pyenv
-export PYENV_ROOT=/usr/local/var/pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-
 # golang
-GO_WORK_PATH=${HOME}/workspace/golang/code
-GO_LIB_PATH=${HOME}/workspace/golang/golib
-export GOROOT=/usr/local/Cellar/go/1.8.3/libexec
-export GOPATH=${GO_LIB_PATH}:${GO_WORK_PATH}
-export PATH="${PATH}:${GOBIN}"
+#GO_WORK_PATH=${HOME}/workspace/golang/code
+#GO_LIB_PATH=${HOME}/workspace/golang/golib
+#export GOROOT=/usr/local/Cellar/go/1.8.3/libexec
+#export GOPATH=${GO_LIB_PATH}:${GO_WORK_PATH}
+#export PATH="${PATH}:${GOBIN}"
 
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
 
 alias ll='ls -al'
 alias vi='vim'
@@ -61,9 +56,20 @@ alias gitproxy="git config —global —replace-all https.proxy 'socks5://127.0.
 alias unsetgitproxy="git config —global —replace-all http.proxy ''; git config —global —replace-all https.proxy ''; echo 'GIT proxy off'"
 
 # add qingge word
+function qglink() {
+  rm -f "/Users/jonas/Library/Application Support/Qingg/Data/wb_table.txt"
+  rm -f "/Users/jonas/Library/Application Support/Qingg/Data/wb_reverse_table.txt"
+  rm -f "/Users/jonas/Library/Application Support/Qingg/Data/py_table.txt"
+  rm -f "/Users/jonas/Library/Application Support/Qingg/Data/sp_table.txt"
+  ln -s "/Users/jonas/Dropbox/config/qingge/wb_table.txt" "/Users/jonas/Library/Application Support/Qingg/Data/wb_table.txt"
+  ln -s "/Users/jonas/Dropbox/config/qingge/wb_reverse_table.txt" "/Users/jonas/Library/Application Support/Qingg/Data/wb_reverse_table.txt"
+  ln -s "/Users/jonas/Dropbox/config/qingge/py_table.txt" "/Users/jonas/Library/Application Support/Qingg/Data/py_table.txt"
+  ln -s "/Users/jonas/Dropbox/config/qingge/sp_table.txt" "/Users/jonas/Library/Application Support/Qingg/Data/sp_table.txt"
+}
 function qgwb() {
   echo "\n$1 $2" >> ~/Dropbox/config/qingge/wb_table.txt
 }
 function qgpy() {
   echo "\n$1 $2" >> ~/Dropbox/config/qingge/py_table.txt
 }
+
