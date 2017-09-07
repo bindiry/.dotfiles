@@ -16,10 +16,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " code completion
 Plug 'Shougo/neocomplete.vim'
-"Plug 'vim-scripts/AutoComplPop'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-" for neovim
-"Plug 'Shougo/deoplete.nvim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 " color schemes
@@ -28,10 +24,8 @@ Plug 'geoffharcourt/one-dark.vim'
 "Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
 "Plug 'kchmck/vim-coffee-script'
-"Plug 'nono/jquery.vim'
 Plug 'tpope/vim-markdown'
 "Plug 'slim-template/vim-slim'
-"Plug 'posva/vim-vue'
 " front-end
 Plug 'mattn/emmet-vim'
 
@@ -39,8 +33,6 @@ Plug 'mattn/emmet-vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
-"Plug 'KurtPreston/vim-autoformat-rails'
-"Plug 'ngmy/vim-rubocop'
 
 " Elixir
 "Plug 'elixir-lang/vim-elixir'
