@@ -3,10 +3,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# autojump
-#[[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
-# z
-#. `brew --prefix`/etc/profile.d/z.sh
 # zsh-autosuggestions
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -24,13 +20,21 @@ eval "$(rbenv init -)"
 # asdf
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
+# for nodejs
+# need run `brew install coreutils pgp`
+#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 alias ll='ls -al'
 alias vi='vim'
 alias cls='clear'
+alias rn='react-native'
 
 function start_aria2 {
   aria2c --conf-path="/Users/jonas/.aria2/aria2.conf" -D
+}
+
+function addotherssh {
+  ssh-add ~/Dropbox/config/ssh_other/*_id_rsa
 }
 
 function vpn {
@@ -49,11 +53,11 @@ function restart_network {
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # proxy
-alias setproxy="export http_proxy=socks5://127.0.0.1:1080; export https_proxy=$http_proxy; echo 'HTTP Proxy on';"
-alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
+#alias setproxy="export http_proxy=socks5://127.0.0.1:1086; export https_proxy=$http_proxy; echo 'HTTP Proxy on';"
+#alias unsetproxy="unset http_proxy; unset https_proxy; echo 'HTTP Proxy off';"
 # Git proxy
-alias gitproxy="git config —global —replace-all https.proxy 'socks5://127.0.0.1:1080'; git config —global —replace-all http.proxy 'socks5://127.0.0.1:1080'; echo 'GIT proxy on'"
-alias unsetgitproxy="git config —global —replace-all http.proxy ''; git config —global —replace-all https.proxy ''; echo 'GIT proxy off'"
+#alias gitproxy="git config --global --replace-all https.proxy 'socks5://127.0.0.1:1086'; git config --global --replace-all http.proxy 'socks5://127.0.0.1:1086'; echo 'GIT proxy on'"
+#alias unsetgitproxy="git config --global --replace-all http.proxy ''; git config --global --replace-all https.proxy ''; echo 'GIT proxy off'"
 
 # add qingge word
 function qglink() {

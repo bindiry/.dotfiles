@@ -4,7 +4,7 @@ syntax enable
 filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-colorscheme onedark
+colorscheme base16-eighties
 set guifont=iosevka:h16         " 设置字体和大小
 set linespace=2
 "set lines=40 columns=200      " 设置默认窗口大小
