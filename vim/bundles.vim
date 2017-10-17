@@ -7,8 +7,10 @@ Plug 'scrooloose/nerdtree'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
+"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 " search
-Plug 'albfan/ag.vim'
+"Plug 'albfan/ag.vim'
+Plug 'mileszs/ack.vim'
 " code comment
 Plug 'scrooloose/nerdcommenter'
 " git status
@@ -19,8 +21,9 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Raimondi/delimitMate'
 Plug 'tpope/vim-surround'
 " color schemes
-"Plug 'geoffharcourt/one-dark.vim'
-Plug 'chriskempson/base16-vim'
+"Plug 'rakr/vim-one'
+Plug 'geoffharcourt/one-dark.vim'
+"Plug 'chriskempson/base16-vim'
 " syntax highlighting
 "Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'

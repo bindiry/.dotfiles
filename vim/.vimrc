@@ -4,7 +4,8 @@ syntax enable
 filetype plugin indent on
 set encoding=utf-8
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-colorscheme base16-eighties
+"colorscheme base16-eighties
+colorscheme onedark
 set guifont=iosevka:h16         " 设置字体和大小
 set linespace=2
 "set lines=40 columns=200      " 设置默认窗口大小
@@ -122,6 +123,7 @@ au FileType slim,javascript let b:delimitMate_nesting_quotes = ['<']
 
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|tmp|output|_site|public|\.asset-cache)|(\.(log|swp|ico|git|svn|png|jpg|zip|gif|ttf|svg|woff|eot|DS_Store|keep|asset-cache))$'
+let g:ctrlp_use_caching = 1
 let g:ctrlp_show_hidden = 1
 nmap <leader>p :CtrlP<CR>
 nmap <leader>bb :CtrlPBuffer<CR>
@@ -131,6 +133,16 @@ let g:ctrlp_prompt_mappings = {
       \ 'PrtClearCache()':      ['<c-g>'],
       \ 'PrtExit()':            ['<esc>', '<c-c>'],
       \ }
+
+" ack
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" leaderf
+"let g:Lf_ShortcutF = '<leader>f'
+"let g:Lf_DefaultMode = 'Fuzzy'
+"let g:Lf_MruFileExclude = ['*.so', '*.swp', '*.swo']
 
 " 切换buffers
 nmap <leader>l :bn<CR>
@@ -168,14 +180,6 @@ function! s:my_cr_function()
 endfunction
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? "\<C-y>" : "\<Space>"
-"let g:neocomplete#enable_auto_select = 1
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags

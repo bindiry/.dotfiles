@@ -16,4 +16,5 @@ cask "appcleaner"
 cask "iterm2"
 cask "macdown"
 cask "wwdc"
+cask "iina"
 mas "magnet", id: 441258766
