@@ -63,6 +63,7 @@ nnoremap U <C-r>
 set scrolloff=7
 " 禁用Ex mode
 map Q <Nop>
+map q <Nop>
 " 默认粘贴不替换寄存器里的内容
 "xnoremap p "0p
 set fillchars+=vert:\          " 隐藏分割线

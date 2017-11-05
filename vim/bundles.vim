@@ -7,7 +7,8 @@ Plug 'scrooloose/nerdtree'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/ctrlp.vim'
-"Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+"Plug 'junegunn/fzf.vim'
 " search
 "Plug 'albfan/ag.vim'
 Plug 'mileszs/ack.vim'

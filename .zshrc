@@ -77,3 +77,6 @@ function qgpy() {
   echo "\n$1 $2" >> ~/Dropbox/config/qingge/py_table.txt
 }
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export GPG_TTY=$(tty)
