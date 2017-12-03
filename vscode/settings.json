@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'M+ 2m', Menlo, Monaco, 'Courier New', monospace",
+    "editor.lineHeight": 26,
+    "workbench.iconTheme": "vs-minimal",
+    "files.autoSave": "afterDelay",
+    // 自定义要在 OS X 上运行的终端应用程序。
+    "terminal.external.osxExec": "iterm.app",
+    // "workbench.fontAliasing": "antialiased",
+
+    "go.autocompleteUnimportedPackages": true,
+    "go.gopath": "/Users/jonas/workspace/golang/golib:/Users/jonas/workspace/golang/code",
+    "go.formatOnSave": true,
+    "go.lintOnSave": true,
+    "go.vetOnSave": true,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Material Palenight",
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/.asset-cache": true,
+        "**/.sass-cache": true
+      }
+}

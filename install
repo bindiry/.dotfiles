@@ -33,6 +33,12 @@ ln -s ~/.dotfiles/sublime_text ~/Library/"Application Support"/"Sublime Text 3"/
 cd ~
 # go https://packagecontrol.io/installation and Ctrl + ` to paste then install
 
+# set vscode
+cd "/Users/jonas/Library/Application Support/Code/User/"
+rm -rf settings.json
+ln -s ~/.dotfiles/vscode/settings.json "/Users/jonas/Library/Application Support/Code/User/settings.json"
+cd ~
+
 # install iptable rules from https://github.com/ranmocy/chnroutes
 #mkdir -p ~/scripts
 #git clone git@github.com:ranmocy/chnroutes.git

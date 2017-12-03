@@ -8,6 +8,7 @@
         {
             "complex_modifications": {
                 "parameters": {
+                    "basic.to_delayed_action_delay_milliseconds": 500,
                     "basic.to_if_alone_timeout_milliseconds": 1000
                 },
                 "rules": [
@@ -67,7 +68,25 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "i"
+                                    "key_code": "f"
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open '/Applications/Firefox.app'"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "launcher_mode",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "t"
                                 },
                                 "to": [
                                     {
@@ -146,6 +165,7 @@
                     },
                     "ignore": false,
                     "keyboard_type": 0,
+                    "manipulate_caps_lock_led": true,
                     "simple_modifications": []
                 },
                 {
@@ -159,6 +179,7 @@
                     },
                     "ignore": true,
                     "keyboard_type": 0,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 },
                 {
@@ -171,10 +192,11 @@
                         "vendor_id": 5426
                     },
                     "ignore": true,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 },
                 {
-                    "disable_built_in_keyboard_if_exists": true,
+                    "disable_built_in_keyboard_if_exists": false,
                     "fn_function_keys": [],
                     "identifiers": {
                         "is_keyboard": true,
@@ -183,6 +205,7 @@
                         "vendor_id": 2652
                     },
                     "ignore": false,
+                    "manipulate_caps_lock_led": false,
                     "simple_modifications": []
                 },
                 {
@@ -195,7 +218,38 @@
                         "vendor_id": 1452
                     },
                     "ignore": true,
+                    "manipulate_caps_lock_led": true,
                     "simple_modifications": []
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 24647,
+                        "vendor_id": 6127
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "page_down"
+                            },
+                            "to": {
+                                "key_code": "right_arrow"
+                            }
+                        },
+                        {
+                            "from": {
+                                "key_code": "page_up"
+                            },
+                            "to": {
+                                "key_code": "left_arrow"
+                            }
+                        }
+                    ]
                 }
             ],
             "fn_function_keys": [
@@ -325,18 +379,18 @@
                 },
                 {
                     "from": {
-                        "key_code": "page_up"
+                        "key_code": "right_command"
                     },
                     "to": {
-                        "consumer_key_code": "volume_increment"
+                        "key_code": "right_option"
                     }
                 },
                 {
                     "from": {
-                        "key_code": "page_down"
+                        "key_code": "right_option"
                     },
                     "to": {
-                        "consumer_key_code": "volume_decrement"
+                        "key_code": "right_command"
                     }
                 }
             ],
