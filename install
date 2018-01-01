@@ -1,9 +1,22 @@
 #!/bin/bash
+
+# Install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+# Install mas
+brew install mas
+# signin account
+# mas signin email@email.com
 
 brew bundle
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# iterm
+# Specify the preferences directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Dropbox/Apps/iTerm2"
+# Tell iTerm2 to use the custom preferences in the directory
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # aria2
 mkdir -p ~/.aria2

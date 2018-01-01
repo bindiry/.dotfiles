@@ -1,22 +1,38 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontSize": 16,
+    "editor.fontSize": 14,
     "editor.fontFamily": "'M+ 2m', Menlo, Monaco, 'Courier New', monospace",
-    "editor.lineHeight": 26,
+    "editor.lineHeight": 24,
+    "editor.minimap.enabled": false,
+    "editor.autoIndent": true,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.tabSize": 2,
     "workbench.iconTheme": "vs-minimal",
     "files.autoSave": "afterDelay",
+    "docker.showExplorer": false,
     // 自定义要在 OS X 上运行的终端应用程序。
     "terminal.external.osxExec": "iterm.app",
+    // cmd + p打开的文件不在当前标签打开
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.colorTheme": "One Dark Pro",
     // "workbench.fontAliasing": "antialiased",
+    "workbench.sideBar.location": "right",
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    // vim
+    "vim.useSystemClipboard": true,
+    "vim.cmdLineInitialColon": true,
+    "vim.hlsearch": true,
+    "vim.searchHighlightColor": "rgba(100, 76, 18, 0.5)",
+    // ruby
 
+    // go
     "go.autocompleteUnimportedPackages": true,
     "go.gopath": "/Users/jonas/workspace/golang/golib:/Users/jonas/workspace/golang/code",
     "go.formatOnSave": true,
     "go.lintOnSave": true,
     "go.vetOnSave": true,
-    "window.zoomLevel": 0,
-    "workbench.colorTheme": "Material Palenight",
-    "editor.minimap.enabled": false,
+
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -24,6 +40,7 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/.asset-cache": true,
-        "**/.sass-cache": true
-      }
+        "**/.sass-cache": true,
+        "**/tmp/cache": true
+    }
 }

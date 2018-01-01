@@ -1,20 +1,43 @@
 cask_args appdir: "/Applications"
+
+tap "codeclimate/formulae"
+tap "homebrew/core"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "caskroom/fonts"
+tap "caskroom/versions"
+tap "caskroom/cask"
 tap "caskroom/cask"
 # tap "telemachus/brew", "https://telemachus@bitbucket.org/telemachus/brew.git"
 # brew "imagemagick"
-# brew "mysql", restart_service: true, conflicts_with: ["homebrew/versions/mysql56"]
 # brew "emacs", args: ["with-cocoa", "with-gnutls"]
-brew "wget"
-brew "curl"
-brew "the_silver_searcher"
-brew "macvim", args: ["--with-lua"]
 brew "aria2"
+brew "ctags"
+brew "curl"
 brew "dnsmasq"
-cask "google-chrome"
-cask "firefox"
+brew "docker"
+brew "git"
+brew "htop"
+brew "macvim", args: ["--with-lua"]
+brew "mysql", restart_service: true
+brew "redis", restart_service: true
+brew "the_silver_searcher"
+brew "wget"
+
+cask "alfred"
+cask "aliwangwang"
 cask "appcleaner"
+cask "firefox"
+cask "google-chrome"
+cask "iina"
 cask "iterm2"
 cask "macdown"
 cask "wwdc"
-cask "iina"
+cask "pomotodo"
+cask "caskroom/fonts/font-mononoki"
+cask "caskroom/fonts/font-roboto"
+cask "caskroom/fonts/font-source-code-pro"
+
 mas "magnet", id: 441258766
+mas "WeChat", id: 836500024
+mas "网易有道词典", id: 491854842
