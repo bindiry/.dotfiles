@@ -39,5 +39,6 @@ cask "caskroom/fonts/font-roboto"
 cask "caskroom/fonts/font-source-code-pro"
 
 mas "magnet", id: 441258766
+mas "Noizio", id: 928871589
 mas "WeChat", id: 836500024
 mas "网易有道词典", id: 491854842
