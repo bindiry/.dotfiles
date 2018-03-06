@@ -39,6 +39,7 @@ ln -s ~/.dotfiles/prezto/prompt_digeni_setup ~/.zprezto/modules/prompt/functions
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 # install hammerspoon
+git clone https://github.com/ashfinal/awesome-hammerspoon.git ~/.hammerspoon --depth=1
 ln -s ~/.dotfiles/hammerspoon/config.lua ~/.hammerspoon/private/config.lua
 
 # set sublime text
