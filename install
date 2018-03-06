@@ -38,6 +38,9 @@ ln -s ~/.dotfiles/prezto/prompt_digeni_setup ~/.zprezto/modules/prompt/functions
 # install zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
+# install hammerspoon
+ln -s ~/.dotfiles/hammerspoon/config.lua ~/.hammerspoon/private/config.lua
+
 # set sublime text
 open "/Applications/Sublime Text.app"
 cd ~/Library/"Application Support"/"Sublime Text 3"/Packages

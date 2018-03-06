@@ -109,6 +109,11 @@ nmap ,m :NERDTreeToggle<CR>
 " 如果打开的文件只剩nerdtree，则直接退出，避免多次:q
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 
+" nerdcommenter
+"let g:NERDCustomDelimiters = {
+        "\ 'yml': { 'left': '#'}
+    "\ }
+
 " airline
 "let g:airline_theme='simple'
 "let g:airline#extensions#tabline#enabled = 1
