@@ -17,13 +17,6 @@ eval "$(rbenv init -)"
 #export GOPATH=${GO_LIB_PATH}:${GO_WORK_PATH}
 #export PATH="${PATH}:${GOBIN}"
 
-# asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-# for nodejs
-# need run `brew install coreutils pgp`
-#PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
 alias ll='ls -al'
 alias vi='vim'
 alias cls='clear'
