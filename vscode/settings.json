@@ -1,38 +1,38 @@
-// Place your settings in this file to overwrite the default settings
 {
-    "editor.fontSize": 14,
+    "workbench.enableExperiments": false,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.sideBar.location": "left",
     "editor.fontFamily": "'M+ 2m', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 14,
     "editor.lineHeight": 24,
     "editor.minimap.enabled": false,
     "editor.autoIndent": true,
     "editor.acceptSuggestionOnEnter": "off",
     "editor.tabSize": 2,
-    "workbench.iconTheme": "vs-minimal",
+    "explorer.autoReveal": false,
     "files.autoSave": "afterDelay",
     "docker.showExplorer": false,
     // 自定义要在 OS X 上运行的终端应用程序。
     "terminal.external.osxExec": "iterm.app",
     // cmd + p打开的文件不在当前标签打开
     "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.colorTheme": "One Dark Pro",
-    // "workbench.fontAliasing": "antialiased",
-    "workbench.sideBar.location": "right",
     "files.trimTrailingWhitespace": true,
     "window.zoomLevel": 0,
+    // git
+    "git.autofetch": true,
+    // ruby
+    "ruby.codeCompletion": false,
+    "ruby.intellisense": false,
     // vim
     "vim.useSystemClipboard": true,
-    "vim.cmdLineInitialColon": true,
+    // "vim.cmdLineInitialColon": true,
     "vim.hlsearch": true,
-    "vim.searchHighlightColor": "rgba(100, 76, 18, 0.5)",
-    // ruby
-
-    // go
-    "go.autocompleteUnimportedPackages": true,
-    "go.gopath": "/Users/jonas/workspace/golang/golib:/Users/jonas/workspace/golang/code",
-    "go.formatOnSave": true,
-    "go.lintOnSave": true,
-    "go.vetOnSave": true,
-
+    // "vim.searchHighlightColor": "rgba(100, 76, 18, 0.5)",
+    // golang
+    "go.lintFlags": ["--disable=all", "--enable=errcheck"],
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -42,5 +42,16 @@
         "**/.asset-cache": true,
         "**/.sass-cache": true,
         "**/tmp/cache": true
+    },
+    // emmet
+    "emmet.includeLanguages": {
+      "html.erb": "html"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "vetur.format.defaultFormatter.html": "js-beautify-html",
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }

@@ -1,15 +1,9 @@
 #!/bin/bash
 
 # Install Homebrew
-#/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install mas
-brew install mas
-# signin account
-# mas signin email@email.com
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew bundle
-
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # iterm
@@ -17,14 +11,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/Dropbox/Apps/iTerm2"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-# aria2
-#mkdir -p ~/.aria2
-#ln -s ~/.dotfiles/.aria2/aria2.conf ~/.aria2/aria2.conf
-
-# install dnsmasq
-#ln -s ~/.dotfiles/dnsmasq/dnsmasq.conf /usr/local/etc/dnsmasq.conf
-#sudo brew services start dnsmasq
 
 # install Prezto
 zsh
@@ -38,22 +24,12 @@ ln -s ~/.dotfiles/prezto/prompt_digeni_setup ~/.zprezto/modules/prompt/functions
 # install zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
-# install hammerspoon
-git clone https://github.com/ashfinal/awesome-hammerspoon.git ~/.hammerspoon --depth=1
-ln -s ~/.dotfiles/hammerspoon/config.lua ~/.hammerspoon/private/config.lua
-
-# set sublime text
-open "/Applications/Sublime Text.app"
-cd ~/Library/"Application Support"/"Sublime Text 3"/Packages
-rm -rf User
-ln -s ~/.dotfiles/sublime_text ~/Library/"Application Support"/"Sublime Text 3"/Packages/User
-cd ~
-# go https://packagecontrol.io/installation and Ctrl + ` to paste then install
-
 # set vscode
-cd "/Users/jonas/Library/Application Support/Code/User/"
+cd "~/Library/Application Support/Code/User/"
 rm -rf settings.json
-ln -s ~/.dotfiles/vscode/settings.json "/Users/jonas/Library/Application Support/Code/User/settings.json"
+ln -s ~/.dotfiles/vscode/settings.json "~/Library/Application Support/Code/User/settings.json"
+ln -s ~/.dotfiles/vscode/keybindings.json "~/Library/Application Support/Code/User/keybindings.json"
+ln -s ~/.dotfiles/vscode/snippets/html.erb.json "~/Library/Application Support/Code/User/snippets/html.erb.json"
 cd ~
 
 # install iptable rules from https://github.com/ranmocy/chnroutes
@@ -73,8 +49,11 @@ cd ~
 #git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build --depth=1
 
 # link dotfiles
-ln -s ~/.dotfiles/vim/.vimrc ~/.vimrc
 vim +PlugInstall +qall
 ln -s ~/.dotfiles/.ctags ~/.ctags
 ln -s ~/.dotfiles/.gemrc ~/.gemrc
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
+
+# aria2
+#mkdir -p ~/.aria2
+#ln -s ~/.dotfiles/.aria2/aria2.conf ~/.aria2/aria2.conf

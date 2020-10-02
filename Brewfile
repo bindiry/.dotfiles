@@ -4,39 +4,28 @@ tap "codeclimate/formulae"
 tap "homebrew/core"
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "caskroom/fonts"
-tap "caskroom/versions"
-tap "caskroom/cask"
-# brew "emacs", args: ["with-cocoa", "with-gnutls"]
-#brew "aria2"
-#brew "ctags"
+#tap "homebrew/cask-fonts"
+#tap "homebrew/cask-versions"
+#tap "homebrew/cask-cask"
 brew "curl"
-#brew "dnsmasq"
-#brew "docker"
 brew "git"
 brew "htop"
-brew "macvim"
-#brew "mysql", restart_service: true
-#brew "redis", restart_service: true
+brew "neovim"
 brew "the_silver_searcher"
-brew "wget"
+brew "tldr"
 
-cask "alfred"
-#cask "aliwangwang"
+cask "iterm2"
 cask "appcleaner"
 cask "firefox"
-#cask "google-chrome"
 cask "iina"
-#cask "iterm2"
-#cask "macdown"
 cask "wwdc"
-#cask "pomotodo"
-cask "hammerspoon"
+cask "visual-studio-code"
+#cask "caskroom/fonts/font-mplus-nerd-font-mono"
 cask "caskroom/fonts/font-mononoki"
 cask "caskroom/fonts/font-roboto"
 cask "caskroom/fonts/font-source-code-pro"
-
-#mas "magnet", id: 441258766
-#mas "Noizio", id: 928871589
-#mas "WeChat", id: 836500024
-#mas "网易有道词典", id: 491854842
+#brew "mysql", restart_service: true
+#brew "redis", restart_service: true
+cask "google-chrome"
+#brew "aria2"
+#brew "docker"
