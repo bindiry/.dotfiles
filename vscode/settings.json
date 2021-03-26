@@ -53,5 +53,6 @@
     "vetur.format.defaultFormatter.html": "js-beautify-html",
     "[jsonc]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "go.useLanguageServer": true
 }
