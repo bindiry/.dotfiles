@@ -1,4 +1,6 @@
 " neovim config
+"
+" cp this file to ~/.config/nvim/init.vim
 
 " install vim-plug
 " sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -21,14 +23,10 @@ let os = substitute(system('uname'), "\n", "", "")
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'joshdick/onedark.vim'
-Plug 'mileszs/ack.vim'
 Plug 'Shougo/defx.nvim',  { 'do': ':UpdateRemotePlugins'}
 Plug 'kristijanhusak/defx-git'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-Plug 'othree/eregex.vim'
-Plug 'tpope/vim-fugitive'
+Plug 'joshdick/onedark.vim'
+Plug 'kassio/neoterm'
 Plug 'benekastah/neomake'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/neco-syntax'
@@ -36,25 +34,32 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 Plug 'tomtom/tcomment_vim'
 Plug 'nelstrom/vim-textobj-rubyblock', { 'for': ['ruby'] }
 Plug 'kana/vim-textobj-user', { 'for': ['ruby'] }
-Plug 'Shougo/neco-syntax'
-Plug 'easymotion/vim-easymotion'
+Plug 'othree/eregex.vim'
+Plug 'othree/html5.vim'
+Plug 'xolox/vim-misc'
+Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'mileszs/ack.vim'
 Plug 'othree/jspc.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'ap/vim-css-color'
+Plug 'bfredl/nvim-miniyank'
+Plug 'dzeban/vim-log-syntax'
 Plug 'stephpy/vim-yaml'
 Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
-Plug 'bfredl/nvim-miniyank'
-Plug 'xolox/vim-misc'
-"Plug 'dzeban/vim-log-syntax'
-"Plug 'kassio/neoterm'
-"Plug 'junegunn/vim-easy-align'
+Plug 'kdheepak/lazygit.nvim', { 'branch': 'nvim-v0.4.3' }
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'easymotion/vim-easymotion'
+Plug 'vim-scripts/renamer.vim'
+" Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
 
@@ -81,6 +86,7 @@ set exrc " loads project spedific .nvimrc
 """""""""""""""""""""""""
 let mapleader=","
 inoremap jj <ESC>
+inoremap <C-t> <NOP>
 map <Leader>r "hy:%S/<C-r>h//gc<left><left><left>
 map <Leader>f *
 map <Leader>rr :!ruby %<CR>
@@ -111,6 +117,9 @@ nnoremap <Leader>tl :call neoterm#clear()<cr>
 " clear highlight
 map <Leader><Leader>h :set hlsearch!<CR>
 
+" Automatically remove trailing spaces
+autocmd BufWritePre * :%s/\s\+$//e
+
 " regenerate CTAGS - https://github.com/universal-ctags/ctags
 map <Leader>ct :silent !ctags -R --exclude="*min.js"<CR>
 
@@ -125,6 +134,9 @@ map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
+
+" lazygit
+nnoremap <silent> <leader>lg :LazyGit<CR>
 
 " Easy align
 " Start interactive EasyAlign in visual mode (e.g. vipga)
@@ -165,7 +177,7 @@ set shell=/bin/zsh
 scriptencoding utf-8
 set encoding=utf-8
 set termencoding=utf-8
-set clipboard=unnamed
+set clipboard=unnamedplus
 filetype plugin indent on " Do filetype detection and load custom file plugins and indent files
 set laststatus=2          " When you go into insert mode,
                           " the status line color changes.
@@ -182,6 +194,8 @@ set listchars=tab:▸\ ,trail:•,extends:»,precedes:«
 autocmd filetype html,xml,go set listchars=tab:\│\ ,trail:-,extends:>,precedes:<,nbsp:+
 colorscheme onedark
 set t_ut= " fixes transparent BG on tmux
+set ttimeoutlen=100
+set diffopt+=vertical
 
 " Always edit file, even when swap file is found
 set shortmess+=A
@@ -194,7 +208,7 @@ set directory=~/.config/nvim/swap  " Directory to use for the swap file
 set diffopt=filler,iwhite          " In diff mode, ignore whitespace changes and align unchanged lines
 set nowrap
 set visualbell
-set mouse=a
+" set mouse=a
 " trigger `autoread` when files changes on disk
 set autoread
 autocmd FocusGained,BufEnter,CursorHold,CursorHoldI * if mode() != 'c' | checktime | endif
@@ -238,6 +252,7 @@ set hlsearch
 set incsearch
 set showmatch
 
+
 " to_html settings
 let html_number_lines = 1
 let html_ignore_folding = 1
@@ -245,7 +260,16 @@ let html_use_css = 1
 "let html_no_pre = 0
 let use_xhtml = 1
 let xml_use_xhtml = 1
-
+" tmux
+set termguicolors
+if &term =~# '^screen'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+" indent guides
+let g:indent_guides_guide_size = 1
+" indent guides shortcut
+map <silent><F7>  <leader>ig
 """""""""""""""""""""""""
 " Plugin's
 """""""""""""""""""""""""
@@ -255,7 +279,7 @@ let xml_use_xhtml = 1
 " let g:user_emmet_leader_key='<C-T>'
 
 " ultisnips
-let g:UltiSnipsExpandTrigger="<C-D>"
+" let g:UltiSnipsExpandTrigger="<C-D>"
 
 " auto-pairs
 let g:AutoPairsFlyMode = 0
@@ -480,3 +504,4 @@ if $VIM_CRONTAB == "true"
     set nobackup
     set nowritebackup
 endif
+
